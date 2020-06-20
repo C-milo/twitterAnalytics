@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />      
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      <script type="text/javascript">      
+      </script>
+</head>
+
+<body>
+      <main role="main" class="container">
+            <form method="POST">
+                  <div class="form-group">
+                        <label for="twitterUser">Enter a valid Twitter username:</label>
+                        <input autofocus type="text" class="form-control" name="twitterUser" placeholder="Enter Twitter Username"/>
+                        <h1><button class="btn btn-success" />Submit</h1>
+                        <label class="checkbox-inline">
+                              <input type="checkbox" name="saveUser" checked data-toggle="toggle"  value="True"> Save username
+                        </label>
+
+                        <!-- onclick="updateCharts()" -->
+                  </div>
+            </form>
+            <div class="row">
+                  <div class="col-sm-6">
+                        <h5>Tweets Likes:</h1>
+                        <canvas id= "likes"></canvas>
+                  </div>
+                  <div class="col-sm-6">
+                        <h5>Tweets Length:</h1>
+                        <canvas id= "len"></canvas>
+                  </div>
+            </div>
+      </main>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script>
+      try{
+            var pythonData = {{ data|safe }};
+      }
+      catch(err){
+            var pythonData = [0];
+      }
+
+      var checkboxes = document.getElementsByTagName('input');
+      checkboxes[1].checked = false;
+
+      var ctx = document.getElementById('likes').getContext('2d');
+      var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Aug','Sep','Oct','Nov','Dec'],
+            //labels:  pythonData.date,
+            datasets: [{
+                  label: 'Likes',
+                  backgroundColor: 'rgb(0, 99, 132)',
+                  borderColor: 'rgb(0, 99, 132)',
+                  data: pythonData.likes                
+            }]
+      },
+
+      // Configuration options go here
+      options: {}
+      });
+
+      var ctx = document.getElementById('len').getContext('2d');
+      var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Aug','Sep','Oct','Nov','Dec'],
+            //labels:  pythonData.date,
+            datasets: [{
+                  label: 'Length',
+                  backgroundColor: 'rgb(99, 99, 132)',
+                  borderColor: 'rgb(0, 99, 132)',
+                  data: pythonData.len                
+            }]
+      },
+
+      // Configuration options go here
+      options: {}
+      });
+
+      // var checkboxes = document.getElementsByTagName('input');
+
+      // for (var i=0; i<checkboxes.length; i++)
+      // {
+      //       if (checkboxes[i].type == 'checkbox')
+      //       {
+      //             checkboxes[i].checked = false;
+      //       }
+      // }
+
+      // function updateCharts(){ 
+      //       chart.data.datasets[0].data = pythonData.likes;
+      //       chart.data.labels = pythonData.date;
+      //       chart.update();
+      // }
+      </script>
+</body>
+
+</html>
