@@ -6,7 +6,7 @@ def create_app():
     app = Flask(__name__)    
 
     with app.app_context():
-        #Import Flask routes
+        # Import Flask routes
         from . import routes
         # Import Dash application
         from .plotydash.dashboard import create_dashboard
