@@ -1,2 +1,13 @@
 # twitterAnalytics
-This my first full-stack learning project using Python and JavaScript. 
+For fun and education. 
+
+This is a work in progress. 
+
+Technologies used:
+
+Python.
+JavaScript
+Dash
+Flask
+MongoDB
+TwitterAPI
