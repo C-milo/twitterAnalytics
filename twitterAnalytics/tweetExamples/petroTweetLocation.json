@@ -1,0 +1,94 @@
+{
+    "contributors": null,
+    "coordinates": null,
+    "created_at": "Mon Jun 29 15:20:24 +0000 2020",
+    "display_text_range": [
+        0,
+        187
+    ],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": []
+    },
+    "favorite_count": 912,
+    "favorited": false,
+    "full_text": "Las coaliciones progresistas y ecologistas ganaron casi todas las alcald\u00edas en disputa en Francia, incluida Par\u00eds y Lyon.\n\nEs la respuesta a los gobiernos de la barbarie y la depredaci\u00f3n.",
+    "geo": null,
+    "id": 1277622956676562952,
+    "id_str": "1277622956676562952",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "is_quote_status": false,
+    "lang": "es",
+    "place": null,
+    "retweet_count": 314,
+    "retweeted": false,
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+    "truncated": false,
+    "user": {
+        "contributors_enabled": false,
+        "created_at": "Tue Jun 23 02:04:11 +0000 2009",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Perfil Oficial del dirigente pol\u00edtico progresista colombiano Gustavo Petro. Por una Colombia Humana con justicia social y en Paz",
+        "entities": {
+            "description": {
+                "urls": []
+            },
+            "url": {
+                "urls": [
+                    {
+                        "display_url": "petro.com.co",
+                        "expanded_url": "http://petro.com.co/",
+                        "indices": [
+                            0,
+                            23
+                        ],
+                        "url": "https://t.co/ho5XWkfwTr"
+                    }
+                ]
+            }
+        },
+        "favourites_count": 16024,
+        "follow_request_sent": false,
+        "followers_count": 3896082,
+        "following": true,
+        "friends_count": 2418,
+        "geo_enabled": false,
+        "has_extended_profile": false,
+        "id": 49849732,
+        "id_str": "49849732",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 4603,
+        "location": "\u00dcT: 4.650541,-74.074043",
+        "name": "Gustavo Petro",
+        "notifications": false,
+        "profile_background_color": "C71218",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/49849732/1583873059",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_link_color": "09324D",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "E8E8CC",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "petrogustavo",
+        "statuses_count": 125053,
+        "time_zone": null,
+        "translator_type": "regular",
+        "url": "https://t.co/ho5XWkfwTr",
+        "utc_offset": null,
+        "verified": true
+    }
+}

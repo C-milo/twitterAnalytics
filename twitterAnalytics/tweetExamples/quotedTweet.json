@@ -1,0 +1,237 @@
+{
+    "contributors": null,
+    "coordinates": null,
+    "created_at": "Mon Jun 29 14:39:34 +0000 2020",
+    "display_text_range": [
+        0,
+        258
+    ],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [
+            {
+                "display_url": "twitter.com/saludhernandez\u2026",
+                "expanded_url": "https://twitter.com/saludhernandezm/status/1277405121954095104",
+                "indices": [
+                    259,
+                    282
+                ],
+                "url": "https://t.co/rgjyan4M3r"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 1733793840,
+                "id_str": "1733793840",
+                "indices": [
+                    16,
+                    22
+                ],
+                "name": "Pulzo",
+                "screen_name": "pulzo"
+            }
+        ]
+    },
+    "favorite_count": 811,
+    "favorited": false,
+    "full_text": "Todo indica que @pulzo por tergiversar a Salud Hern\u00e1ndez solo para ganar audiencia la expuso a una cr\u00edtica injusta.\n\nQue sirva el caso para decirle que quienes no estamos contra la cadena perpetua en Colombia no somos amigos de Garavito, sino de la justicia. https://t.co/rgjyan4M3r",
+    "geo": null,
+    "id": 1277612680833089538,
+    "id_str": "1277612680833089538",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "is_quote_status": true,
+    "lang": "es",
+    "place": null,
+    "possibly_sensitive": false,
+    "quoted_status": {
+        "contributors": null,
+        "coordinates": null,
+        "created_at": "Mon Jun 29 00:54:48 +0000 2020",
+        "display_text_range": [
+            0,
+            234
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "id": 1733793840,
+                    "id_str": "1733793840",
+                    "indices": [
+                        11,
+                        17
+                    ],
+                    "name": "Pulzo",
+                    "screen_name": "pulzo"
+                },
+                {
+                    "id": 55379094,
+                    "id_str": "55379094",
+                    "indices": [
+                        208,
+                        217
+                    ],
+                    "name": "FLIP",
+                    "screen_name": "FLIP_org"
+                }
+            ]
+        },
+        "favorite_count": 5083,
+        "favorited": false,
+        "full_text": "Se\u00f1ores de @pulzo : les hago responsables de lo que me pueda pasar. La intensidad del odio hacia m\u00ed que han generado con su detestable tergiversaci\u00f3n supera todos los l\u00edmites. Esta vez cruzaron el l\u00edmite. La @FLIP_org debe intervenir.",
+        "geo": null,
+        "id": 1277405121954095104,
+        "id_str": "1277405121954095104",
+        "in_reply_to_screen_name": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "is_quote_status": false,
+        "lang": "es",
+        "place": null,
+        "retweet_count": 2739,
+        "retweeted": false,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "truncated": false,
+        "user": {
+            "contributors_enabled": false,
+            "created_at": "Mon Oct 11 19:24:20 +0000 2010",
+            "default_profile": true,
+            "default_profile_image": false,
+            "description": "Periodista.",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "display_url": "facebook.com/saludhernandez\u2026",
+                            "expanded_url": "http://www.facebook.com/saludhernandezmora1/",
+                            "indices": [
+                                0,
+                                23
+                            ],
+                            "url": "https://t.co/RHF002Qhq3"
+                        }
+                    ]
+                }
+            },
+            "favourites_count": 634,
+            "follow_request_sent": false,
+            "followers_count": 238017,
+            "following": true,
+            "friends_count": 249,
+            "geo_enabled": false,
+            "has_extended_profile": false,
+            "id": 201398373,
+            "id_str": "201398373",
+            "is_translation_enabled": false,
+            "is_translator": false,
+            "lang": null,
+            "listed_count": 771,
+            "location": "Colombia",
+            "name": "Salud Hern\u00e1ndez-Mora",
+            "notifications": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/612267933306368000/vxjYyNan_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/612267933306368000/vxjYyNan_normal.jpg",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "protected": false,
+            "screen_name": "saludhernandezm",
+            "statuses_count": 17298,
+            "time_zone": null,
+            "translator_type": "none",
+            "url": "https://t.co/RHF002Qhq3",
+            "utc_offset": null,
+            "verified": false
+        }
+    },
+    "quoted_status_id": 1277405121954095104,
+    "quoted_status_id_str": "1277405121954095104",
+    "quoted_status_permalink": {
+        "display": "twitter.com/saludhernandez\u2026",
+        "expanded": "https://twitter.com/saludhernandezm/status/1277405121954095104",
+        "url": "https://t.co/rgjyan4M3r"
+    },
+    "retweet_count": 232,
+    "retweeted": false,
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "truncated": false,
+    "user": {
+        "contributors_enabled": false,
+        "created_at": "Tue Jun 23 02:04:11 +0000 2009",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Perfil Oficial del dirigente pol\u00edtico progresista colombiano Gustavo Petro. Por una Colombia Humana con justicia social y en Paz",
+        "entities": {
+            "description": {
+                "urls": []
+            },
+            "url": {
+                "urls": [
+                    {
+                        "display_url": "petro.com.co",
+                        "expanded_url": "http://petro.com.co/",
+                        "indices": [
+                            0,
+                            23
+                        ],
+                        "url": "https://t.co/ho5XWkfwTr"
+                    }
+                ]
+            }
+        },
+        "favourites_count": 16024,
+        "follow_request_sent": false,
+        "followers_count": 3896090,
+        "following": true,
+        "friends_count": 2418,
+        "geo_enabled": false,
+        "has_extended_profile": false,
+        "id": 49849732,
+        "id_str": "49849732",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 4603,
+        "location": "\u00dcT: 4.650541,-74.074043",
+        "name": "Gustavo Petro",
+        "notifications": false,
+        "profile_background_color": "C71218",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/49849732/1583873059",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_link_color": "09324D",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "E8E8CC",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "petrogustavo",
+        "statuses_count": 125053,
+        "time_zone": null,
+        "translator_type": "regular",
+        "url": "https://t.co/ho5XWkfwTr",
+        "utc_offset": null,
+        "verified": true
+    }
+}

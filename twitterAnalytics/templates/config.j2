@@ -1,0 +1,28 @@
+{% extends "layout.j2" %}
+{% block content %}    
+    <form method="POST">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Type username or hashtag to use for your report.</label>
+            <input type="text" class="form-control" id="lword" name="lword" placeholder="e.g. realDonaldTrump">
+            <fieldset class="form-group">
+                <div class="row">              
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="reportType" id="hashtag" value="hashtag" >
+                      <label class="form-check-label" for="gridRadios1">
+                        Hashtag
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="reportType" id="username" value="username" checked>
+                      <label class="form-check-label" for="gridRadios2">
+                        Username
+                      </label>
+                    </div>                
+                  </div>
+                </div>
+              </fieldset>
+            <button class="btn btn-success" />Submit
+        </div>  
+    </form>
+{% endblock %}

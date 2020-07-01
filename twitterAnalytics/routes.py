@@ -4,10 +4,8 @@ from flask import request
 from flask import current_app as app
 
 # Local library
-# from .tweets_collector import run_search
-# from .tweets_collector import read_users_collection
-# from .tweets_collector import read_db_and_analyze
-# 
+from .reportConfig import run_search
+
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
 #       if  request.method == 'POST':
@@ -28,8 +26,21 @@ from flask import current_app as app
 #             return render_template('index.html', data=data)
 # 
 @app.route('/', methods=['POST', 'GET'])
-def home():
-      return render_template('dashboard.jinja')
+def root():
+      return render_template('dashboard.j2')
+
+@app.route('/config', methods=['GET', 'POST'])
+def config():
+      if request.method == 'POST':
+            try:
+                  lword = request.form.get('lword')
+                  reportType = request.form.get('reportType')
+            except:
+                  make_response('Unsupported request', 400)
+            saveUser = "False"
+            run_search(lword, saveUser)            
+      else:
+            return render_template('config.j2')
 # 
 # @app.route('/api/automatic_search', methods=['GET'])
 # def automatic_search():
