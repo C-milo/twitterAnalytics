@@ -15,8 +15,7 @@ class Tweet(mongoengine.DynamicDocument):
     quoted_mentions = mongoengine.ListField()
     quoted_text = mongoengine.StringField()
     quoted_url = mongoengine.StringField()
-    media_title = mongoengine.StringField()
-    media_image_url = mongoengine.StringField()
+    media_title = mongoengine.StringField()    
     media_expanded_url = mongoengine.StringField()
 
 class Config(mongoengine.Document):

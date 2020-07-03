@@ -27,6 +27,55 @@ def db_connect():
       connect(creds['DB_NAME'], host=creds['HOSTNAME'], username=creds['USER'], password=creds['PASSWORD'])            
       return print('connected to', creds['DB_NAME'])
 
+class Configurator():
+      def __init__(self, lword, reportType):            
+            db_connect()
+            self.lword = lword
+            self.reportType = reportType
+      def saveConfig(self):            
+            Config(
+                  report_type = self.reportType,                  
+                  lookup_term = self.lword
+            ).save()
+            return print('Configuration saved.')
+      def saveTweets(self, tweets):
+            for tweet in tweets:
+                  Tweet(
+                        tweet_id = tweet._json.id,
+                        username = tweet._json.user.screen_name,
+                        location = tweet._json.user.location,
+                        created_at = tweet._json.created_at,
+                        hashtags = tweet._json.entities.hashtags,
+                        user_mentions = tweet._json.entities.user_mentions,
+                        favorite_count = tweet._json.favorite_count,
+                        retweet_count = tweet._json.retweet_count,
+                        full_text = tweet._json.full_text,
+                        lang = tweet._json.lang,
+                        quoted_user = tweet._json.quoted_status.user.screen_name,
+                        quoted_mentions = tweet._json.quoted_status.user.screen_name,
+                        quoted_text = tweet._json.quoted_status.full_text,
+                        quoted_url = tweet._json.quoted_status.quoted_status_permalink.url,
+                        media_title = tweet._json.extended_entities.media[0].additional_media_info.title,
+                        media_expanded_url = tweet._json.extended_entities.media[0].expanded_url
+                  ).save()
+            return print('Tweets saved.')
+      def readParameters(self, reportType):
+            switcher={
+                  0: self.isHashtag,
+                  1: self.isProfile
+            }
+            return switcher.get(reportType)
+      def isHashtag(self):            
+            tc = TwitterClient(hashtag=self.lword)
+            tweets = tc.get_hashtag_data(10)
+            self.saveTweets(tweets)
+            return print('hashtag report can now be generated for #',self.lword)
+      def isProfile(self):
+            tc = TwitterClient(user=self.lword)
+            tweets = tc.get_user_timeline_tweets(10)
+            self.saveTweets(tweets)
+            return print('profile report can now be generated for ',self.lword)
+      
 class TwitterAuthenticator():
       def authenticate_twitter_app(self):
             with open("twitter_credentials.json", "r") as file:
@@ -36,18 +85,21 @@ class TwitterAuthenticator():
             return auth
 
 class TwitterClient():
-      def __init__(self, user=None):
-            db_connect()
+      def __init__(self, user=None, hashtag=None):
             self.auth = TwitterAuthenticator().authenticate_twitter_app()
             self.api = API(self.auth)
             self.user = user
+            self.hashtag = hashtag
       def get_user_timeline_tweets(self, num_tweets):
             tweets = []
             for tweet in Cursor(self.api.user_timeline, id=self.user, tweet_mode="extended").items(num_tweets):
                   tweets.append(tweet)
             return tweets
-
-
+      def get_hashtag_data(self, num_tweets):
+            tweets = []
+            for tweet in Cursor(self.api.search, q=self.hashtag, tweet_mode="extended").items(num_tweets):
+                  tweets.append(tweet)
+            return tweets
 
 # 
 # class TweetAnalyzer():

@@ -4,7 +4,7 @@ from flask import request
 from flask import current_app as app
 
 # Local library
-from .reportConfig import run_search
+#from .reportConfig import run_search
 
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
@@ -34,11 +34,11 @@ def config():
       if request.method == 'POST':
             try:
                   lword = request.form.get('lword')
-                  reportType = request.form.get('reportType')
+                  reportType = request.form.get('reportType')                  
             except:
                   make_response('Unsupported request', 400)
-            saveUser = "False"
-            run_search(lword, saveUser)            
+            else:
+                  print('remplazar esto.')
       else:
             return render_template('config.j2')
 # 
