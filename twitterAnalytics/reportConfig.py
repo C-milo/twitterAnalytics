@@ -8,8 +8,8 @@ from tweepy import OAuthHandler
 from pymongo import MongoClient
 from mongoengine import connect
 #Custom library
-from models import Tweet
-from models import Config
+from model import Tweets
+from model import Config
 
 # class TwitterDB():
 #       def __init__(self):
@@ -31,7 +31,7 @@ class Configurator():
       def __init__(self, lword, reportType):            
             db_connect()
             self.lword = lword
-            self.reportType = reportType
+            self.reportType = int(reportType)
       def saveConfig(self):            
             Config(
                   report_type = self.reportType,                  
@@ -40,40 +40,51 @@ class Configurator():
             return print('Configuration saved.')
       def saveTweets(self, tweets):
             for tweet in tweets:
-                  Tweet(
-                        tweet_id = tweet._json.id,
-                        username = tweet._json.user.screen_name,
-                        location = tweet._json.user.location,
-                        created_at = tweet._json.created_at,
-                        hashtags = tweet._json.entities.hashtags,
-                        user_mentions = tweet._json.entities.user_mentions,
-                        favorite_count = tweet._json.favorite_count,
-                        retweet_count = tweet._json.retweet_count,
-                        full_text = tweet._json.full_text,
-                        lang = tweet._json.lang,
-                        quoted_user = tweet._json.quoted_status.user.screen_name,
-                        quoted_mentions = tweet._json.quoted_status.user.screen_name,
-                        quoted_text = tweet._json.quoted_status.full_text,
-                        quoted_url = tweet._json.quoted_status.quoted_status_permalink.url,
-                        media_title = tweet._json.extended_entities.media[0].additional_media_info.title,
-                        media_expanded_url = tweet._json.extended_entities.media[0].expanded_url
-                  ).save()
+                  tw = Tweets(
+                        tweet_id = tweet._json['id'],
+                        username = tweet._json['user']['screen_name'],
+                        location = tweet._json['user']['location'],
+                        created_at = tweet._json['created_at'],
+                        hashtags = tweet._json['entities']['hashtags'],
+                        user_mentions = tweet._json['entities']['user_mentions'],
+                        favorite_count = tweet._json['favorite_count'],
+                        retweet_count = tweet._json['retweet_count'],
+                        full_text = tweet._json['full_text'],
+                        lang = tweet._json['lang']
+                  ).save()                                      
+                  if tweet._json['is_quote_status']:                        
+                        tw = Tweets(
+                              quoted_user = tweet._json['quoted_status']['user']['screen_name'],
+                              quoted_mentions = tweet._json['quoted_status']['user']['screen_name'],
+                              quoted_text = tweet._json['quoted_status']['full_text'],
+                              quoted_url = tweet._json['quoted_status']['quoted_status_permalink']['url']
+                              )
+                  else: continue
+                  if "extended_entities" in tweet._json:
+                        tw = Tweets(
+                              media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title'],
+                              media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
+                        )                        
+                  else: continue        
+                  tw.save()
             return print('Tweets saved.')
-      def readParameters(self, reportType):
+      def readParameters(self):
             switcher={
                   0: self.isHashtag,
                   1: self.isProfile
-            }
-            return switcher.get(reportType)
+            }            
+            return switcher.get(self.reportType)
       def isHashtag(self):            
             tc = TwitterClient(hashtag=self.lword)
-            tweets = tc.get_hashtag_data(10)
-            self.saveTweets(tweets)
+            tweets = tc.get_hashtag_data(3)            
+            self.saveTweets(tweets)                              
+            self.saveConfig()
             return print('hashtag report can now be generated for #',self.lword)
       def isProfile(self):
             tc = TwitterClient(user=self.lword)
-            tweets = tc.get_user_timeline_tweets(10)
+            tweets = tc.get_user_timeline_tweets(3)
             self.saveTweets(tweets)
+            self.saveConfig()
             return print('profile report can now be generated for ',self.lword)
       
 class TwitterAuthenticator():

@@ -4,7 +4,7 @@ from flask import request
 from flask import current_app as app
 
 # Local library
-#from .reportConfig import run_search
+from .reportConfig import Configurator
 
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
@@ -38,7 +38,8 @@ def config():
             except:
                   make_response('Unsupported request', 400)
             else:
-                  print('remplazar esto.')
+                  conf = Configurator(lword=lword, reportType=reportType)
+                  conf.readParameters
       else:
             return render_template('config.j2')
 # 
