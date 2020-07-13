@@ -22,7 +22,7 @@ from model import Config
 #             return self.collection
 
 def db_connect():
-      with open("mongodb_info.json", "r") as file:
+      with open("twitterAnalytics/mongodb_info.json", "r") as file:
             creds = json.load(file)
       connect(creds['DB_NAME'], host=creds['HOSTNAME'], username=creds['USER'], password=creds['PASSWORD'])            
       return print('connected to', creds['DB_NAME'])
@@ -89,7 +89,7 @@ class Configurator():
       
 class TwitterAuthenticator():
       def authenticate_twitter_app(self):
-            with open("twitter_credentials.json", "r") as file:
+            with open("twitterAnalytics/twitter_credentials.json", "r") as file:
                   creds = json.load(file)            
             auth = tweepy.OAuthHandler(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'])
             auth.set_access_token(creds['ACCESS_TOKEN'], creds['ACCESS_SECRET'])
@@ -101,6 +101,8 @@ class TwitterClient():
             self.api = API(self.auth)
             self.user = user
             self.hashtag = hashtag
+      def get_api(self):
+            return self.api
       def get_user_timeline_tweets(self, num_tweets):
             tweets = []
             for tweet in Cursor(self.api.user_timeline, id=self.user, tweet_mode="extended").items(num_tweets):

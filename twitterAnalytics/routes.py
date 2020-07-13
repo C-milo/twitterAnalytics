@@ -2,6 +2,7 @@ from flask import render_template
 from flask import make_response 
 from flask import request
 from flask import current_app as app
+from flask import flash
 
 # Local library
 from .reportConfig import Configurator
@@ -39,7 +40,9 @@ def config():
                   make_response('Unsupported request', 400)
             else:
                   conf = Configurator(lword=lword, reportType=reportType)
-                  conf.readParameters
+                  conf.readParameters()
+                  flash('Configuration saved!', category='alert alert-success')                  
+                  return render_template('config.j2')
       else:
             return render_template('config.j2')
 # 

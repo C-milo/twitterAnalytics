@@ -49,9 +49,15 @@
           <a href="#clients"><i class="fa fa-fw fa-user"></i> Dashboard</a>
           <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         </div>
-        <div class="main">          
-            {% block content %}
-            {% endblock %}          
+        <div class="main">        
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}                
+                {% for category, message in messages %}
+                  <div class="{{ category }}" role="alert">{{ message }}</div>
+                {% endfor %}                
+              {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}          
         </div>
       </div>                       
     </div>      
