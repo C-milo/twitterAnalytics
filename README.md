@@ -3,16 +3,18 @@ For fun and education.
 
 This is a work in progress. 
 
-Technologies used:
+# Technologies used in this webapp:
 
 Python.
 JavaScript
 Dash
 Flask
-MongoDB
-TwitterAPI
+MongoDB (mongoengine)
+Tweepy
 
-Running the app:
+See requirements.txt for all python libraries.
+
+# Running the app:
 
 Two JSON files must be created to setup tweepy and mongodb connections:
 
