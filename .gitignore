@@ -3,3 +3,4 @@ zappa_settings.json
 mongodb_info.json
 __pycache__/
 .vscode/
+.vscode/settings.json
