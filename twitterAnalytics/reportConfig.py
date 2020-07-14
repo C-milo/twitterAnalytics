@@ -51,29 +51,32 @@ class Configurator():
                         retweet_count = tweet._json['retweet_count'],
                         full_text = tweet._json['full_text'],
                         lang = tweet._json['lang']
-                  ).save()                  
-                  if "quoted_status" in tweet._json:                   
-                        tw = Tweets(
-                              is_quoting_tweet = 'True',
-                              quoted_user = tweet._json['quoted_status']['user']['screen_name'],
-                              quoted_mentions = tweet._json['quoted_status']['user']['screen_name'],
-                              quoted_text = tweet._json['quoted_status']['full_text'],
-                              # quoted_url = tweet._json['quoted_status']['quoted_status_permalink']['url']
-                              ).save()
+                  )
+                  print('saved tweet_id', tweet._json['id'])                                          
+                  if "quoted_status" in tweet._json:
+                        print('tweet_id ', tweet._json['id'], 'is quoting someone')                        
+                        tw.is_quoting_tweet = 'True'
+                        tw.quoted_user = tweet._json['quoted_status']['user']['screen_name']
+                        tw.quoted_text = tweet._json['quoted_status']['full_text']                                                   
                   else: pass                                    
-                  if "retweeted_status" in tweet._json:                        
-                        tw = Tweets(
-                              is_retweet = 'True',
-                              retweeted_user = tweet._json['retweeted_status']['user']['screen_name']
-                        ).save()
+                  if "retweeted_status" in tweet._json:
+                        print('tweet_id ', tweet._json['id'], 'is retweeting someone')                        
+                        tw.is_retweet = 'True'
+                        tw.retweeted_user = tweet._json['retweeted_status']['user']['screen_name']
                   else: pass
                   if "extended_entities" in tweet._json:
-                        tw = Tweets(
-                              has_media = 'True',
-                              media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title'],
-                              media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
-                        ).save()                                             
-                  else: pass                                     
+                        print('tweet_id ', tweet._json['id'], 'has media')
+                        tw.has_media = 'True'
+                        tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
+                        tw.media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
+                  else: pass
+                  print('tweet_id', tweet._json['id'], 'saving extra parameters ?')
+                  try: 
+                        print('saving tweet_id:', tweet._json['id'])
+                        tw.save()
+                  except:
+                        print('skipping duplicate tweet_id', tweet._json['id'])
+                        continue
             return print('Tweets saved.')
       def readParameters(self):
             switcher={
@@ -89,7 +92,7 @@ class Configurator():
             return print('hashtag report can now be generated for #',self.lword)
       def isProfile(self):
             tc = TwitterClient(user=self.lword)
-            tweets = tc.get_user_timeline_tweets(2)
+            tweets = tc.get_user_timeline_tweets(10)
             self.saveTweets(tweets)
             self.saveConfig()
             return print('profile report can now be generated for ',self.lword)
@@ -179,3 +182,6 @@ class TwitterClient():
 #       query_dict = users_collection.find({'ref':'saved_users'}, {'username_list': 1})
 #       user_list = query_dict[0]['username_list']
 #       return user_list
+if __name__ == "__main__":
+      cf = Configurator(lword='realDonaldTrump', reportType='1')
+      cf.isProfile()
