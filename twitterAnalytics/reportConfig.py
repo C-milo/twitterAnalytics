@@ -39,7 +39,7 @@ class Configurator():
             ).save()
             return print('Configuration saved.')
       def saveTweets(self, tweets):
-            for tweet in tweets:
+            for tweet in tweets:                  
                   tw = Tweets(
                         tweet_id = tweet._json['id'],
                         username = tweet._json['user']['screen_name'],
@@ -51,22 +51,29 @@ class Configurator():
                         retweet_count = tweet._json['retweet_count'],
                         full_text = tweet._json['full_text'],
                         lang = tweet._json['lang']
-                  ).save()                                      
-                  if tweet._json['is_quote_status']:                        
+                  ).save()                  
+                  if "quoted_status" in tweet._json:                   
                         tw = Tweets(
+                              is_quoting_tweet = 'True',
                               quoted_user = tweet._json['quoted_status']['user']['screen_name'],
                               quoted_mentions = tweet._json['quoted_status']['user']['screen_name'],
                               quoted_text = tweet._json['quoted_status']['full_text'],
-                              quoted_url = tweet._json['quoted_status']['quoted_status_permalink']['url']
-                              )
-                  else: continue
+                              # quoted_url = tweet._json['quoted_status']['quoted_status_permalink']['url']
+                              ).save()
+                  else: pass                                    
+                  if "retweeted_status" in tweet._json:                        
+                        tw = Tweets(
+                              is_retweet = 'True',
+                              retweeted_user = tweet._json['retweeted_status']['user']['screen_name']
+                        ).save()
+                  else: pass
                   if "extended_entities" in tweet._json:
                         tw = Tweets(
+                              has_media = 'True',
                               media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title'],
                               media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
-                        )                        
-                  else: continue        
-                  tw.save()
+                        ).save()                                             
+                  else: pass                                     
             return print('Tweets saved.')
       def readParameters(self):
             switcher={
@@ -82,7 +89,7 @@ class Configurator():
             return print('hashtag report can now be generated for #',self.lword)
       def isProfile(self):
             tc = TwitterClient(user=self.lword)
-            tweets = tc.get_user_timeline_tweets(3)
+            tweets = tc.get_user_timeline_tweets(2)
             self.saveTweets(tweets)
             self.saveConfig()
             return print('profile report can now be generated for ',self.lword)

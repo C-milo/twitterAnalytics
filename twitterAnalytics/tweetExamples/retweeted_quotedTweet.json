@@ -1,0 +1,346 @@
+{
+    "contributors": null,
+    "coordinates": null,
+    "created_at": "Mon Jul 13 17:30:32 +0000 2020",
+    "display_text_range": [
+        0,
+        140
+    ],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+            {
+                "id": 49849732,
+                "id_str": "49849732",
+                "indices": [
+                    3,
+                    16
+                ],
+                "name": "Gustavo Petro",
+                "screen_name": "petrogustavo"
+            }
+        ]
+    },
+    "favorite_count": 0,
+    "favorited": false,
+    "full_text": "RT @petrogustavo: La raz\u00f3n del negocio en salud es interferir la autonomia del acto m\u00e9dico, disminuyendo tratamientos y minimizando costos,\u2026",
+    "geo": null,
+    "id": 1282729135291412480,
+    "id_str": "1282729135291412480",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "is_quote_status": true,
+    "lang": "es",
+    "place": null,
+    "quoted_status_id": 1282709140930953216,
+    "quoted_status_id_str": "1282709140930953216",
+    "quoted_status_permalink": {
+        "display": "twitter.com/JERobledo/stat\u2026",
+        "expanded": "https://twitter.com/JERobledo/status/1282709140930953216",
+        "url": "https://t.co/4ztniqLJpk"
+    },
+    "retweet_count": 602,
+    "retweeted": false,
+    "retweeted_status": {
+        "contributors": null,
+        "coordinates": null,
+        "created_at": "Mon Jul 13 17:00:31 +0000 2020",
+        "display_text_range": [
+            0,
+            268
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "urls": [
+                {
+                    "display_url": "twitter.com/JERobledo/stat\u2026",
+                    "expanded_url": "https://twitter.com/JERobledo/status/1282709140930953216",
+                    "indices": [
+                        269,
+                        292
+                    ],
+                    "url": "https://t.co/4ztniqLJpk"
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorite_count": 1400,
+        "favorited": false,
+        "full_text": "La raz\u00f3n del negocio en salud es interferir la autonomia del acto m\u00e9dico, disminuyendo tratamientos y minimizando costos, presionando a los m\u00e9dicos a aceptarlo.\n\nPor qu\u00e9 esa realidad es un maltrato para los m\u00e9dicos por quien la denuncia, \u00bfel maltrato no es de las EPS? https://t.co/4ztniqLJpk",
+        "geo": null,
+        "id": 1282721581408690179,
+        "id_str": "1282721581408690179",
+        "in_reply_to_screen_name": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "is_quote_status": true,
+        "lang": "es",
+        "place": null,
+        "possibly_sensitive": false,
+        "quoted_status": {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Mon Jul 13 16:11:05 +0000 2020",
+            "display_text_range": [
+                0,
+                272
+            ],
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "urls": [
+                    {
+                        "display_url": "twitter.com/petrogustavo/s\u2026",
+                        "expanded_url": "https://twitter.com/petrogustavo/status/1282658017725624320",
+                        "indices": [
+                            273,
+                            296
+                        ],
+                        "url": "https://t.co/IkJOmMNRsC"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id": 49849732,
+                        "id_str": "49849732",
+                        "indices": [
+                            140,
+                            153
+                        ],
+                        "name": "Gustavo Petro",
+                        "screen_name": "petrogustavo"
+                    }
+                ]
+            },
+            "favorite_count": 931,
+            "favorited": false,
+            "full_text": "Lo irresponsable no es criticar la Ley 100, a la que tantos nos oponemos incluso desde su tr\u00e1mite en 1993.\nLo irresponsable es su maltrato, @petrogustavo, a los m\u00e9dicos y trabajadores de la salud con generalizaciones falaces e insistir en el error, en vez de rectificarlo. https://t.co/IkJOmMNRsC",
+            "geo": null,
+            "id": 1282709140930953216,
+            "id_str": "1282709140930953216",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "is_quote_status": true,
+            "lang": "es",
+            "place": null,
+            "possibly_sensitive": false,
+            "quoted_status_id": 1282658017725624320,
+            "quoted_status_id_str": "1282658017725624320",
+            "quoted_status_permalink": {
+                "display": "twitter.com/petrogustavo/s\u2026",
+                "expanded": "https://twitter.com/petrogustavo/status/1282658017725624320",
+                "url": "https://t.co/IkJOmMNRsC"
+            },
+            "retweet_count": 312,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Fri Mar 18 14:56:01 +0000 2011",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Arquitecto, 26 a\u00f1os profesor de la U.Nacional de Colombia, elegido 8 veces como el mejor senador del pa\u00eds. Senador de la Rep\u00fablica.",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "jorgerobledo.com/voluntarios/",
+                                "expanded_url": "http://jorgerobledo.com/voluntarios/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/G3YjYYH4YN"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 4217,
+                "follow_request_sent": false,
+                "followers_count": 1204529,
+                "following": true,
+                "friends_count": 353,
+                "geo_enabled": true,
+                "has_extended_profile": false,
+                "id": 268322810,
+                "id_str": "268322810",
+                "is_translation_enabled": false,
+                "is_translator": false,
+                "lang": null,
+                "listed_count": 1700,
+                "location": "Colombia",
+                "name": "Jorge Enrique Robledo",
+                "notifications": false,
+                "profile_background_color": "FFDD00",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/268322810/1575641542",
+                "profile_image_url": "http://pbs.twimg.com/profile_images/981227456643457024/X5VYI8hv_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/981227456643457024/X5VYI8hv_normal.jpg",
+                "profile_link_color": "FFCC00",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "EFEFEF",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "JERobledo",
+                "statuses_count": 99444,
+                "time_zone": null,
+                "translator_type": "none",
+                "url": "https://t.co/G3YjYYH4YN",
+                "utc_offset": null,
+                "verified": true
+            }
+        },
+        "quoted_status_id": 1282709140930953216,
+        "quoted_status_id_str": "1282709140930953216",
+        "quoted_status_permalink": {
+            "display": "twitter.com/JERobledo/stat\u2026",
+            "expanded": "https://twitter.com/JERobledo/status/1282709140930953216",
+            "url": "https://t.co/4ztniqLJpk"
+        },
+        "retweet_count": 602,
+        "retweeted": false,
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
+        "user": {
+            "contributors_enabled": false,
+            "created_at": "Tue Jun 23 02:04:11 +0000 2009",
+            "default_profile": false,
+            "default_profile_image": false,
+            "description": "Perfil Oficial del dirigente pol\u00edtico progresista colombiano Gustavo Petro. Por una Colombia Humana con justicia social y en Paz",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "display_url": "petro.com.co",
+                            "expanded_url": "http://petro.com.co/",
+                            "indices": [
+                                0,
+                                23
+                            ],
+                            "url": "https://t.co/ho5XWkfwTr"
+                        }
+                    ]
+                }
+            },
+            "favourites_count": 16046,
+            "follow_request_sent": false,
+            "followers_count": 3906408,
+            "following": true,
+            "friends_count": 2419,
+            "geo_enabled": false,
+            "has_extended_profile": false,
+            "id": 49849732,
+            "id_str": "49849732",
+            "is_translation_enabled": false,
+            "is_translator": false,
+            "lang": null,
+            "listed_count": 4596,
+            "location": "\u00dcT: 4.650541,-74.074043",
+            "name": "Gustavo Petro",
+            "notifications": false,
+            "profile_background_color": "C71218",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/49849732/1583873059",
+            "profile_image_url": "http://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+            "profile_link_color": "09324D",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "E8E8CC",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "protected": false,
+            "screen_name": "petrogustavo",
+            "statuses_count": 125621,
+            "time_zone": null,
+            "translator_type": "regular",
+            "url": "https://t.co/ho5XWkfwTr",
+            "utc_offset": null,
+            "verified": true
+        }
+    },
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "truncated": false,
+    "user": {
+        "contributors_enabled": false,
+        "created_at": "Tue Jun 23 02:04:11 +0000 2009",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Perfil Oficial del dirigente pol\u00edtico progresista colombiano Gustavo Petro. Por una Colombia Humana con justicia social y en Paz",
+        "entities": {
+            "description": {
+                "urls": []
+            },
+            "url": {
+                "urls": [
+                    {
+                        "display_url": "petro.com.co",
+                        "expanded_url": "http://petro.com.co/",
+                        "indices": [
+                            0,
+                            23
+                        ],
+                        "url": "https://t.co/ho5XWkfwTr"
+                    }
+                ]
+            }
+        },
+        "favourites_count": 16046,
+        "follow_request_sent": false,
+        "followers_count": 3906408,
+        "following": true,
+        "friends_count": 2419,
+        "geo_enabled": false,
+        "has_extended_profile": false,
+        "id": 49849732,
+        "id_str": "49849732",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 4596,
+        "location": "\u00dcT: 4.650541,-74.074043",
+        "name": "Gustavo Petro",
+        "notifications": false,
+        "profile_background_color": "C71218",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/49849732/1583873059",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ_normal.jpg",
+        "profile_link_color": "09324D",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "E8E8CC",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "petrogustavo",
+        "statuses_count": 125621,
+        "time_zone": null,
+        "translator_type": "regular",
+        "url": "https://t.co/ho5XWkfwTr",
+        "utc_offset": null,
+        "verified": true
+    }
+}
