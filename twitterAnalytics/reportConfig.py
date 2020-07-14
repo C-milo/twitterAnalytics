@@ -52,7 +52,6 @@ class Configurator():
                         full_text = tweet._json['full_text'],
                         lang = tweet._json['lang']
                   )
-                  print('saved tweet_id', tweet._json['id'])                                          
                   if "quoted_status" in tweet._json:
                         print('tweet_id ', tweet._json['id'], 'is quoting someone')                        
                         tw.is_quoting_tweet = 'True'
@@ -70,10 +69,10 @@ class Configurator():
                         tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
                         tw.media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
                   else: pass
-                  print('tweet_id', tweet._json['id'], 'saving extra parameters ?')
-                  try: 
-                        print('saving tweet_id:', tweet._json['id'])
+                  print('saving tweet_id:', tweet._json['id'])
+                  try:                         
                         tw.save()
+                        print('saved tweet_id', tweet._json['id'])                                          
                   except:
                         print('skipping duplicate tweet_id', tweet._json['id'])
                         continue
