@@ -8,8 +8,8 @@ from tweepy import OAuthHandler
 from pymongo import MongoClient
 from mongoengine import connect
 #Custom library
-from model import Tweets
-from model import Config
+from .model import Tweets
+from .model import Config
 
 # class TwitterDB():
 #       def __init__(self):
@@ -81,8 +81,9 @@ class Configurator():
             switcher={
                   0: self.isHashtag,
                   1: self.isProfile
-            }            
-            return switcher.get(self.reportType)
+            }
+            func = switcher.get(self.reportType)      
+            return func()
       def isHashtag(self):            
             tc = TwitterClient(hashtag=self.lword)
             tweets = tc.get_hashtag_data(3)            
