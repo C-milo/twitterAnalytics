@@ -11,16 +11,6 @@ from mongoengine import connect
 from .model import Tweets
 from .model import Config
 
-# class TwitterDB():
-#       def __init__(self):
-#             with open("mongodb_info.json", "r") as file:
-#                   creds = json.load(file)
-#             self.client = MongoClient(creds['HOSTNAME'], username=creds['USER'], password=creds['PASSWORD'], authSource=creds['DB_NAME'])
-#             self.db = self.client[creds['DB_NAME']] 
-#       def get_collection(self, collection_name):
-#             self.collection = self.db[collection_name]
-#             return self.collection
-
 def db_connect():
       with open("twitterAnalytics/mongodb_info.json", "r") as file:
             creds = json.load(file)
@@ -28,16 +18,21 @@ def db_connect():
       return print('connected to', creds['DB_NAME'])
 
 class Configurator():
-      def __init__(self, lword, reportType):            
+      def __init__(self, lword, reportType, numTweets=1):            
             db_connect()
             self.lword = lword
+            self.numTweets = int(numTweets)
             self.reportType = int(reportType)
-      def saveConfig(self):            
-            Config(
-                  report_type = self.reportType,                  
-                  lookup_term = self.lword
-            ).save()
-            return print('Configuration saved.')
+      def saveConfig(self):
+            try:          
+                  Config(
+                        report_type = self.reportType,                                                       
+                        lookup_term = self.lword
+                  ).save()
+                  msg = print('Configuration saved.')
+            except: 
+                  msg = print('Not saving config as it already exists.')
+            return print(msg)
       def saveTweets(self, tweets):
             for tweet in tweets:                  
                   tw = Tweets(
@@ -54,19 +49,23 @@ class Configurator():
                   )
                   if "quoted_status" in tweet._json:
                         print('tweet_id ', tweet._json['id'], 'is quoting someone')                        
-                        tw.is_quoting_tweet = 'True'
+                        tw.is_quoted = 'True'
                         tw.quoted_user = tweet._json['quoted_status']['user']['screen_name']
                         tw.quoted_text = tweet._json['quoted_status']['full_text']                                                   
                   else: pass                                    
                   if "retweeted_status" in tweet._json:
                         print('tweet_id ', tweet._json['id'], 'is retweeting someone')                        
                         tw.is_retweet = 'True'
-                        tw.retweeted_user = tweet._json['retweeted_status']['user']['screen_name']
+                        tw.retweet_user = tweet._json['retweeted_status']['user']['screen_name']
+                        tw.retweet_text =  tweet._json['retweeted_status']['full_text']
+                        tw.retweet_id = tweet._json['retweeted_status']['id']
                   else: pass
                   if "extended_entities" in tweet._json:
                         print('tweet_id ', tweet._json['id'], 'has media')
                         tw.has_media = 'True'
-                        tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
+                        if "dditional_media_info" in tweet._json:
+                              tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
+                        else: pass
                         tw.media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
                   else: pass
                   print('saving tweet_id:', tweet._json['id'])
@@ -86,16 +85,18 @@ class Configurator():
             return func()
       def isHashtag(self):            
             tc = TwitterClient(hashtag=self.lword)
-            tweets = tc.get_hashtag_data(3)            
+            tweets = tc.get_hashtag_tweets(self.numTweets)            
             self.saveTweets(tweets)                              
             self.saveConfig()
-            return print('hashtag report can now be generated for #',self.lword)
+            return print('hashtag report can now be generated for',self.lword)
       def isProfile(self):
             tc = TwitterClient(user=self.lword)
-            tweets = tc.get_user_timeline_tweets(10)
+            tweets = tc.get_user_timeline_tweets(self.numTweets)
             self.saveTweets(tweets)
             self.saveConfig()
             return print('profile report can now be generated for ',self.lword)
+      def queryDB(self):
+            return None
       
 class TwitterAuthenticator():
       def authenticate_twitter_app(self):
@@ -110,7 +111,7 @@ class TwitterClient():
             self.auth = TwitterAuthenticator().authenticate_twitter_app()
             self.api = API(self.auth)
             self.user = user
-            self.hashtag = hashtag
+            self.hashtag = hashtag + ' -filter:retweets'
       def get_api(self):
             return self.api
       def get_user_timeline_tweets(self, num_tweets):
@@ -118,70 +119,12 @@ class TwitterClient():
             for tweet in Cursor(self.api.user_timeline, id=self.user, tweet_mode="extended").items(num_tweets):
                   tweets.append(tweet)
             return tweets
-      def get_hashtag_data(self, num_tweets):
+      def get_hashtag_tweets(self, num_tweets):
             tweets = []
-            for tweet in Cursor(self.api.search, q=self.hashtag, tweet_mode="extended").items(num_tweets):
+            for tweet in Cursor(self.api.search, q=self.hashtag, result_type="popular", tweet_mode="extended").items(num_tweets):                 
                   tweets.append(tweet)
             return tweets
 
-# 
-# class TweetAnalyzer():
-#       def tweets_to_data_frame(self, tweets):
-#             df = pd.DataFrame(data=[tweet['text'] for tweet in tweets], columns=['Tweets'])      
-#             df['id'] = np.array([tweet['id'] for tweet in tweets])
-#             df['len'] = np.array([len(tweet['text']) for tweet in tweets])
-#             df['date'] = np.array([tweet['created_at'] for tweet in tweets])
-#             df['date'] = df['date'].astype(str)
-#             df['source'] = np.array([tweet['source'] for tweet in tweets])
-#             df['likes'] = np.array([tweet['favorite_count'] for tweet in tweets])
-#             df['retweets'] = np.array([tweet['retweet_count'] for tweet in tweets])
-#             return df
-# 
-# def run_search(twitterUser, save_user):
-#       user = twitterUser
-#       twitter_client = TwitterClient()
-#       mongo_client = TwitterDB()
-# 
-#       api = twitter_client.get_twitter_client_api()
-#       try:
-#             tweets = api.user_timeline(screen_name=user, count=10)
-#       except:
-#             return -1
-      
-#       if save_user  == "True":
-#             print('save_user set to True, saving user in users_collection')
-#             users_collection = mongo_client.get_collection(collection_name='saved_users')
-#             users_collection.update({'ref':'saved_users'}, {'$addToSet': {'username_list': user}})
-#       else:
-#             None
-#       #Inserts tweets into MongoDB tweets_collection
-#       tweets_collection = mongo_client.get_collection(collection_name='tweets')
-#       for t in tweets:
-#             try:                  
-#                   tweets_collection.update(t._json, t._json, upsert=True)
-#                   print('tweets_collection db updated')
-#             except:
-#                   print('skipping duplicated id')
-#       return
-# 
-# def read_db_and_analyze(twitterUser):
-#       tweets = list()
-#       mongo_client = TwitterDB()
-#       twitter_analyzer = TweetAnalyzer()
-#       tweets_collection = mongo_client.get_collection(collection_name='tweets')
-#       #Look up in DB for username tweets
-#       for tweet in tweets_collection.find({"user.screen_name": twitterUser}):
-#             tweets.append(tweet)
-#       #Stores tweets in dataframe
-#       df = twitter_analyzer.tweets_to_data_frame(tweets)
-#       return df
-
-# def read_users_collection():      
-#       mongo_client = TwitterDB()
-#       users_collection = mongo_client.get_collection(collection_name='saved_users')
-#       query_dict = users_collection.find({'ref':'saved_users'}, {'username_list': 1})
-#       user_list = query_dict[0]['username_list']
-#       return user_list
-if __name__ == "__main__":
-      cf = Configurator(lword='realDonaldTrump', reportType='1')
-      cf.isProfile()
+# if __name__ == "__main__":
+#       cf = Configurator(lword='#ElDiaMasFelizDeMiVida', reportType='0')
+#       cf.readParameters()

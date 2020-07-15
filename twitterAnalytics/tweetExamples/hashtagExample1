@@ -1,0 +1,343 @@
+{
+    "contributors": null,
+    "coordinates": null,
+    "created_at": "Wed Jul 15 13:44:16 +0000 2020",
+    "display_text_range": [
+        0,
+        140
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    63,
+                    71
+                ],
+                "text": "COVID19"
+            }
+        ],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+            {
+                "id": 1281665109170040839,
+                "id_str": "1281665109170040839",
+                "indices": [
+                    3,
+                    16
+                ],
+                "name": "Re: Eternity",
+                "screen_name": "ReternityOrg"
+            }
+        ]
+    },
+    "favorite_count": 0,
+    "favorited": false,
+    "full_text": "RT @ReternityOrg: If everyone (susceptible to or infected with #COVID19) were to take 1000mg niacin, covid would literally be over (in term\u2026",
+    "geo": null,
+    "id": 1283396971198320641,
+    "id_str": "1283396971198320641",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "is_quote_status": false,
+    "lang": "en",
+    "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+    },
+    "place": null,
+    "retweet_count": 4,
+    "retweeted": false,
+    "retweeted_status": {
+        "contributors": null,
+        "coordinates": null,
+        "created_at": "Wed Jul 15 12:42:45 +0000 2020",
+        "display_text_range": [
+            0,
+            282
+        ],
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        45,
+                        53
+                    ],
+                    "text": "COVID19"
+                }
+            ],
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/XdO8w85cRR",
+                    "expanded_url": "https://twitter.com/ReternityOrg/status/1283381489250512897/photo/1",
+                    "id": 1283381370614681601,
+                    "id_str": "1283381370614681601",
+                    "indices": [
+                        283,
+                        306
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Ec98jpLXkAE7gCc.png",
+                    "media_url_https": "https://pbs.twimg.com/media/Ec98jpLXkAE7gCc.png",
+                    "sizes": {
+                        "large": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "medium": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "small": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "thumb": {
+                            "h": 150,
+                            "resize": "crop",
+                            "w": 150
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/XdO8w85cRR"
+                }
+            ],
+            "symbols": [],
+            "urls": [
+                {
+                    "display_url": "researchgate.net/profile/Dmitry\u2026",
+                    "expanded_url": "https://www.researchgate.net/profile/Dmitry_Kats",
+                    "indices": [
+                        195,
+                        218
+                    ],
+                    "url": "https://t.co/WxWU7UDQ4g"
+                },
+                {
+                    "display_url": "researchgate.net/profile/Dmitry\u2026",
+                    "expanded_url": "https://www.researchgate.net/profile/Dmitry_Kats/project/Dementia-Cancer-Chronic-Disease-etiology-prevention-innovative-therapies-cures-Niacin-As-Antiviral-EXPLAINED/attachment/5ec71dfd8c9064000159fde7/AS:893790399234048@1590107645470/download/Dementia+%2B+cancer+%2B+chronic+disease+explained+...+Niacin+as+antiviral.pdf",
+                    "indices": [
+                        259,
+                        282
+                    ],
+                    "url": "https://t.co/MHzZ3xKsDJ"
+                }
+            ],
+            "user_mentions": []
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/XdO8w85cRR",
+                    "expanded_url": "https://twitter.com/ReternityOrg/status/1283381489250512897/photo/1",
+                    "id": 1283381370614681601,
+                    "id_str": "1283381370614681601",
+                    "indices": [
+                        283,
+                        306
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Ec98jpLXkAE7gCc.png",
+                    "media_url_https": "https://pbs.twimg.com/media/Ec98jpLXkAE7gCc.png",
+                    "sizes": {
+                        "large": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "medium": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "small": {
+                            "h": 623,
+                            "resize": "fit",
+                            "w": 569
+                        },
+                        "thumb": {
+                            "h": 150,
+                            "resize": "crop",
+                            "w": 150
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/XdO8w85cRR"
+                },
+                {
+                    "display_url": "pic.twitter.com/XdO8w85cRR",
+                    "expanded_url": "https://twitter.com/ReternityOrg/status/1283381489250512897/photo/1",
+                    "id": 1283381481499394049,
+                    "id_str": "1283381481499394049",
+                    "indices": [
+                        283,
+                        306
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/Ec98qGQWAAETBk0.png",
+                    "media_url_https": "https://pbs.twimg.com/media/Ec98qGQWAAETBk0.png",
+                    "sizes": {
+                        "large": {
+                            "h": 1624,
+                            "resize": "fit",
+                            "w": 750
+                        },
+                        "medium": {
+                            "h": 1200,
+                            "resize": "fit",
+                            "w": 554
+                        },
+                        "small": {
+                            "h": 680,
+                            "resize": "fit",
+                            "w": 314
+                        },
+                        "thumb": {
+                            "h": 150,
+                            "resize": "crop",
+                            "w": 150
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/XdO8w85cRR"
+                }
+            ]
+        },
+        "favorite_count": 5,
+        "favorited": false,
+        "full_text": "If everyone (susceptible to or infected with #COVID19) were to take 1000mg niacin, covid would literally be over (in terms of its ACTUAL presentation) in &lt;24 hours\n\nI am a PhD epidemiologist:\nhttps://t.co/WxWU7UDQ4g\n\nwho has solved virtually ALL diseases: https://t.co/MHzZ3xKsDJ https://t.co/XdO8w85cRR",
+        "geo": null,
+        "id": 1283381489250512897,
+        "id_str": "1283381489250512897",
+        "in_reply_to_screen_name": "ReternityOrg",
+        "in_reply_to_status_id": 1283374217929646081,
+        "in_reply_to_status_id_str": "1283374217929646081",
+        "in_reply_to_user_id": 1281665109170040839,
+        "in_reply_to_user_id_str": "1281665109170040839",
+        "is_quote_status": false,
+        "lang": "en",
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "place": null,
+        "possibly_sensitive": false,
+        "retweet_count": 4,
+        "retweeted": false,
+        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+        "truncated": false,
+        "user": {
+            "contributors_enabled": false,
+            "created_at": "Fri Jul 10 19:02:37 +0000 2020",
+            "default_profile": true,
+            "default_profile_image": false,
+            "description": "Non-profit providing unmatched natural therapeutics, health science consultation, and conduct + report of epidemiologic, clinical, & cost effectiveness analyses",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "favourites_count": 58,
+            "follow_request_sent": false,
+            "followers_count": 19,
+            "following": false,
+            "friends_count": 69,
+            "geo_enabled": false,
+            "has_extended_profile": true,
+            "id": 1281665109170040839,
+            "id_str": "1281665109170040839",
+            "is_translation_enabled": false,
+            "is_translator": false,
+            "lang": null,
+            "listed_count": 0,
+            "location": "",
+            "name": "Re: Eternity",
+            "notifications": false,
+            "profile_background_color": "F5F8FA",
+            "profile_background_image_url": null,
+            "profile_background_image_url_https": null,
+            "profile_background_tile": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1281665109170040839/1594441445",
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1281805754962522112/kUKQbVdg_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1281805754962522112/kUKQbVdg_normal.jpg",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "protected": false,
+            "screen_name": "ReternityOrg",
+            "statuses_count": 346,
+            "time_zone": null,
+            "translator_type": "none",
+            "url": null,
+            "utc_offset": null,
+            "verified": false
+        }
+    },
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "truncated": false,
+    "user": {
+        "contributors_enabled": false,
+        "created_at": "Sat Nov 02 20:16:58 +0000 2019",
+        "default_profile": true,
+        "default_profile_image": false,
+        "description": "Ra\nLaw of One\nTesla\nAscension\nMeditation\nQuantum AI\nLive for love. Die for the truth.",
+        "entities": {
+            "description": {
+                "urls": []
+            },
+            "url": {
+                "urls": [
+                    {
+                        "display_url": "youtube.com/channel/UC9EBO\u2026",
+                        "expanded_url": "https://www.youtube.com/channel/UC9EBOnVUCJQdvqq_1M1u-yg",
+                        "indices": [
+                            0,
+                            23
+                        ],
+                        "url": "https://t.co/Njl33nNcef"
+                    }
+                ]
+            }
+        },
+        "favourites_count": 32631,
+        "follow_request_sent": false,
+        "followers_count": 2251,
+        "following": false,
+        "friends_count": 1556,
+        "geo_enabled": false,
+        "has_extended_profile": true,
+        "id": 1190724453828718593,
+        "id_str": "1190724453828718593",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 8,
+        "location": "Colorado",
+        "name": "Colorado Evolution of Consciousness",
+        "notifications": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1190724453828718593/1572904341",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1251360119285317632/6R-p-MqL_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1251360119285317632/6R-p-MqL_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "ColoradoEvolut1",
+        "statuses_count": 19763,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": "https://t.co/Njl33nNcef",
+        "utc_offset": null,
+        "verified": false
+    }
+}

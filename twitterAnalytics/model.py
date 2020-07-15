@@ -11,14 +11,19 @@ class Tweets(mongoengine.DynamicDocument):
     retweet_count = mongoengine.IntField()
     full_text = mongoengine.StringField()
     lang = mongoengine.StringField()
-    is_quoting_tweet = mongoengine.StringField(default='False')
+    #Is quoted    
+    is_quoted = mongoengine.StringField(default='False')
     quoted_user = mongoengine.StringField(default='None')    
     quoted_text = mongoengine.StringField(default='None')    
+    #Is Retweet
     is_retweet = mongoengine.StringField(default='False')
-    retweeted_user = mongoengine.StringField(default='None')    
+    retweet_text = mongoengine.StringField()
+    retweet_id = mongoengine.IntField()
+    retweet_user = mongoengine.StringField(default='None')    
+    #Has Media
     has_media = mongoengine.StringField(default='False') 
-    media = mongoengine.DictField() 
+    media = mongoengine.DictField()
 
 class Config(mongoengine.Document):
     report_type = mongoengine.IntField(required=True)
-    lookup_term = mongoengine.StringField(max_lenght=80, required=True)
+    lookup_term = mongoengine.StringField(max_lenght=80, required=True, unique=True)

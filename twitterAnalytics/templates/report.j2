@@ -1,0 +1,14 @@
+{% extends "layout.j2" %}
+{% block content %}    
+    <form method="POST">
+      <div class="form-group">
+            <label for="selectReport">Select a report from the list:</label>
+            <select class="form-control" id="selectReport">
+              {% for r in reports %}
+                <option>{{ r }}</option>
+              {% endfor%}
+            </select>
+          <button class="btn btn-success" />Submit
+      </div>
+  </form>
+{% endblock %}

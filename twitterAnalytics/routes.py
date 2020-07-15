@@ -26,7 +26,7 @@ from .reportConfig import Configurator
 #             data = {"likes": 0, "date": 0}
 #             return render_template('index.html', data=data)
 # 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['GET'])
 def root():
       return render_template('dashboard.j2')
 
@@ -35,16 +35,30 @@ def config():
       if request.method == 'POST':
             try:
                   lword = request.form.get('lword')
-                  reportType = request.form.get('reportType')                  
+                  reportType = request.form.get('reportType')
+                  numTweets = request.form.get('numTweets')
             except:
                   make_response('Unsupported request', 400)
             else:
-                  conf = Configurator(lword=lword, reportType=reportType)
+                  conf = Configurator(
+                        lword=lword, 
+                        reportType=reportType,
+                        numTweets=numTweets
+                        )
                   conf.readParameters()
                   flash('Configuration saved!', category='alert alert-success')                  
                   return render_template('config.j2')
       else:
             return render_template('config.j2')
+
+@app.route('/report', methods=['GET', 'POST'])
+def report():
+      if request.method == 'POST':
+            return render_template('dashboard.j2')
+      else:
+            # Temporal value
+            reports = ['petrogustavo', 'realDonaldTrump']
+            return render_template('report.j2', reports=reports)
 # 
 # @app.route('/api/automatic_search', methods=['GET'])
 # def automatic_search():
