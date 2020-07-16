@@ -59,6 +59,10 @@ def report():
             # Temporal value
             reports = ['petrogustavo', 'realDonaldTrump']
             return render_template('report.j2', reports=reports)
+
+@app.route('/contact', methods=['GET'])
+def contact():
+      return render_template('contact.j2')
 # 
 # @app.route('/api/automatic_search', methods=['GET'])
 # def automatic_search():
