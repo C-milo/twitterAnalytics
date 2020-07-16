@@ -2,6 +2,7 @@ import mongoengine
 
 class Tweets(mongoengine.DynamicDocument):
     tweet_id = mongoengine.IntField(unique=True)
+    search = mongoengine.StringField(required=True)
     username = mongoengine.StringField()
     location = mongoengine.StringField()
     created_at = mongoengine.DateTimeField()
@@ -26,4 +27,4 @@ class Tweets(mongoengine.DynamicDocument):
 
 class Config(mongoengine.Document):
     report_type = mongoengine.IntField(required=True)
-    lookup_term = mongoengine.StringField(max_lenght=80, required=True, unique=True)
+    report_name = mongoengine.StringField(max_lenght=80, required=True, unique=True)

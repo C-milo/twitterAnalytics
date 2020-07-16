@@ -5,7 +5,8 @@ from flask import current_app as app
 from flask import flash
 
 # Local library
-from .reportConfig import Configurator
+from twitterAnalytics.reportConfig import Configurator
+from twitterAnalytics.reportConfig import MongoDB
 
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
@@ -54,10 +55,15 @@ def config():
 @app.route('/report', methods=['GET', 'POST'])
 def report():
       if request.method == 'POST':
-            return render_template('dashboard.j2')
+            try:
+                  selectReport = request.form.get('report_name')
+            except:
+                  make_response('Unsupported request', 400)
+            else:                  
+                  return render_template('dashboard.j2')
       else:
             # Temporal value
-            reports = ['petrogustavo', 'realDonaldTrump']
+            reports = MongoDB().get_reports()
             return render_template('report.j2', reports=reports)
 
 @app.route('/contact', methods=['GET'])

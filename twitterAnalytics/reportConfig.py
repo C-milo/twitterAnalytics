@@ -6,20 +6,28 @@ from tweepy import API
 from tweepy import Cursor
 from tweepy import OAuthHandler
 from pymongo import MongoClient
-from mongoengine import connect
+from mongoengine import connect, disconnect
 #Custom library
-from .model import Tweets
-from .model import Config
+from twitterAnalytics.model import Tweets
+from twitterAnalytics.model import Config
 
-def db_connect():
-      with open("twitterAnalytics/mongodb_info.json", "r") as file:
-            creds = json.load(file)
-      connect(creds['DB_NAME'], host=creds['HOSTNAME'], username=creds['USER'], password=creds['PASSWORD'])            
-      return print('connected to', creds['DB_NAME'])
+class MongoDB():
+      def db_connect(self):
+            with open("twitterAnalytics/mongodb_info.json", "r") as file:
+                  creds = json.load(file)
+            connect(creds['DB_NAME'], host=creds['HOSTNAME'], username=creds['USER'], password=creds['PASSWORD'])            
+            return print('connected to', creds['DB_NAME'])
+      def get_reports(self):
+            self.db_connect()
+            response = []            
+            for report in Config.objects(): # pylint: disable=no-member
+                  response.append(report.report_name)
+            disconnect()            
+            return response
 
 class Configurator():
       def __init__(self, lword, reportType, numTweets=1):            
-            db_connect()
+            MongoDB().db_connect()
             self.lword = lword
             self.numTweets = int(numTweets)
             self.reportType = int(reportType)
@@ -27,7 +35,7 @@ class Configurator():
             try:          
                   Config(
                         report_type = self.reportType,                                                       
-                        lookup_term = self.lword
+                        report_name = self.lword
                   ).save()
                   msg = print('Configuration saved.')
             except: 
@@ -37,6 +45,7 @@ class Configurator():
             for tweet in tweets:                  
                   tw = Tweets(
                         tweet_id = tweet._json['id'],
+                        search = self.lword,
                         username = tweet._json['user']['screen_name'],
                         location = tweet._json['user']['location'],
                         created_at = tweet._json['created_at'],
@@ -88,15 +97,15 @@ class Configurator():
             tweets = tc.get_hashtag_tweets(self.numTweets)            
             self.saveTweets(tweets)                              
             self.saveConfig()
+            disconnect()
             return print('hashtag report can now be generated for',self.lword)
       def isProfile(self):
             tc = TwitterClient(user=self.lword)
             tweets = tc.get_user_timeline_tweets(self.numTweets)
             self.saveTweets(tweets)
             self.saveConfig()
-            return print('profile report can now be generated for ',self.lword)
-      def queryDB(self):
-            return None
+            disconnect()
+            return print('profile report can now be generated for ',self.lword)      
       
 class TwitterAuthenticator():
       def authenticate_twitter_app(self):
@@ -107,7 +116,7 @@ class TwitterAuthenticator():
             return auth
 
 class TwitterClient():
-      def __init__(self, user=None, hashtag=None):
+      def __init__(self, user=None, hashtag=''):
             self.auth = TwitterAuthenticator().authenticate_twitter_app()
             self.api = API(self.auth)
             self.user = user

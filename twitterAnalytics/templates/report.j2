@@ -3,9 +3,9 @@
     <form method="POST">
       <div class="form-group">
             <label for="selectReport">Select a report from the list:</label>
-            <select class="form-control" id="selectReport">
-              {% for r in reports %}
-                <option>{{ r }}</option>
+            <select class="form-control" id="selectReport" name="selectReport">
+              {% for report_name in reports %}
+                <option value="{{ report_name }}">{{ report_name }}</option>
               {% endfor%}
             </select>
           <button class="btn btn-success" />Submit
