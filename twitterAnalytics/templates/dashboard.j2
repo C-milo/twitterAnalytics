@@ -1,5 +1,5 @@
 {% extends "layout.j2" %}
 {% block content %}
     <h1>Jinja says: {{ selectedReport }}</h1>
-    <iframe class="responsive-iframe" frameborder='0' noresize='noresize' src="/dashapp/{{ selectedReport }}" title="dashboard"></iframe>
+    <iframe class="responsive-iframe" frameborder='0' noresize='noresize' src="/dashapp/{{reportType}}/{{ selectedReport }}" title="dashboard"></iframe>
 {% endblock %}

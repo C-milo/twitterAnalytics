@@ -17,7 +17,7 @@ def root():
 def config():
       if request.method == 'POST':
             try:
-                  lword = request.form.get('lword')
+                  lword = request.form.get('lword').lower()
                   reportType = request.form.get('reportType')
                   numTweets = request.form.get('numTweets')
             except:
@@ -38,11 +38,12 @@ def config():
 def report():
       if request.method == 'POST':
             try:                  
-                  selectedReport = request.form.get('selectedReport')                  
+                  selectedReport = request.form.get('selectedReport').replace("#", "")
+                  reportType = '1'                                 
             except:
                   make_response('Unsupported request', 400)
             else:                                    
-                  return render_template('dashboard.j2', selectedReport=selectedReport)
+                  return render_template('dashboard.j2', selectedReport=selectedReport, reportType=reportType)
       else:            
             reports = MongoDB().get_reports()
             return render_template('report.j2', reports=reports)

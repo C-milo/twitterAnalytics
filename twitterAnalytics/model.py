@@ -1,30 +1,30 @@
-import mongoengine
+import mongoengine as me
 
-class Tweets(mongoengine.DynamicDocument):
-    tweet_id = mongoengine.IntField(unique=True)
-    search = mongoengine.StringField(required=True)
-    username = mongoengine.StringField()
-    location = mongoengine.StringField()
-    created_at = mongoengine.DateTimeField()
-    hashtags = mongoengine.ListField()
-    user_mentions = mongoengine.ListField()
-    favorite_count = mongoengine.IntField()
-    retweet_count = mongoengine.IntField()
-    full_text = mongoengine.StringField()
-    lang = mongoengine.StringField()
+class Tweets(me.DynamicDocument):
+    tweet_id = me.IntField(unique=True)
+    search = me.StringField(required=True)
+    username = me.StringField()
+    location = me.StringField()
+    created_at = me.DateTimeField()
+    hashtags = me.ListField()
+    user_mentions = me.ListField()
+    favorite_count = me.IntField()
+    retweet_count = me.IntField()
+    full_text = me.StringField()
+    lang = me.StringField()
     #Is quoted    
-    is_quoted = mongoengine.StringField(default='False')
-    quoted_user = mongoengine.StringField(default='None')    
-    quoted_text = mongoengine.StringField(default='None')    
+    is_quoted = me.StringField(default='False')
+    quoted_user = me.StringField(default='None')    
+    quoted_text = me.StringField(default='None')    
     #Is Retweet
-    is_retweet = mongoengine.StringField(default='False')
-    retweet_text = mongoengine.StringField()
-    retweet_id = mongoengine.IntField()
-    retweet_user = mongoengine.StringField(default='None')    
+    is_retweet = me.StringField(default='False')
+    retweet_text = me.StringField()
+    retweet_id = me.IntField()
+    retweet_user = me.StringField(default='None')    
     #Has Media
-    has_media = mongoengine.StringField(default='False') 
-    media = mongoengine.DictField()
+    has_media = me.StringField(default='False') 
+    media = me.DictField()
 
-class Config(mongoengine.Document):
-    report_type = mongoengine.IntField(required=True)
-    report_name = mongoengine.StringField(max_lenght=80, required=True, unique=True)
+class Config(me.Document):    
+    report_type = me.IntField(required=True)
+    report_name = me.StringField(max_lenght=80, required=True, unique=True)
