@@ -3,33 +3,15 @@ from flask import make_response
 from flask import request
 from flask import current_app as app
 from flask import flash
+from flask import session
 
 # Local library
 from twitterAnalytics.reportConfig import Configurator
 from twitterAnalytics.reportConfig import MongoDB
 
-# @app.route('/', methods=['POST', 'GET'])
-# def index():
-#       if  request.method == 'POST':
-#             try:
-#                   twitterUser = request.form.get('twitterUser')
-#                   saveUser = request.form.get('saveUser')
-#                   run_search(twitterUser, saveUser)
-#                   tweets_df = read_db_and_analyze(twitterUser)
-#                   likes = list(tweets_df['likes'].values)
-#                   date  = list(tweets_df['date'].values)
-#                   tweet_len = list(tweets_df['len'].values)
-#                   data  = {"likes":likes, "date":date, "len":tweet_len}
-#                   return render_template('index.html', data=data)
-#             except:
-#                   make_response('Unsupported request', 400)            
-#       else:
-#             data = {"likes": 0, "date": 0}
-#             return render_template('index.html', data=data)
-# 
 @app.route('/', methods=['GET'])
 def root():
-      return render_template('dashboard.j2')
+      return render_template('home.j2')
 
 @app.route('/config', methods=['GET', 'POST'])
 def config():
@@ -55,14 +37,13 @@ def config():
 @app.route('/report', methods=['GET', 'POST'])
 def report():
       if request.method == 'POST':
-            try:
-                  selectReport = request.form.get('report_name')
+            try:                  
+                  selectedReport = request.form.get('selectedReport')                  
             except:
                   make_response('Unsupported request', 400)
-            else:                  
-                  return render_template('dashboard.j2')
-      else:
-            # Temporal value
+            else:                                    
+                  return render_template('dashboard.j2', selectedReport=selectedReport)
+      else:            
             reports = MongoDB().get_reports()
             return render_template('report.j2', reports=reports)
 

@@ -1,14 +1,12 @@
 {% extends "layout.j2" %}
 {% block content %}    
-    <form method="POST">
-      <div class="form-group">
-            <label for="selectReport">Select a report from the list:</label>
-            <select class="form-control" id="selectReport" name="selectReport">
-              {% for report_name in reports %}
-                <option value="{{ report_name }}">{{ report_name }}</option>
-              {% endfor%}
-            </select>
-          <button class="btn btn-success" />Submit
-      </div>
+  <form action="/report" method="POST">      
+    <label for="selectedReport">Select a report from the list:</label>
+    <select class="form-control" id="selectedReport" name="selectedReport">
+      {% for report_name in reports %}
+        <option value="{{ report_name }}">{{ report_name }}</option>
+      {% endfor%}
+    </select>
+    <button type="submit" class="btn btn-success"/>Submit      
   </form>
 {% endblock %}

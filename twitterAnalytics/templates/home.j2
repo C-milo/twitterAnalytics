@@ -1,0 +1,33 @@
+{% extends "layout.j2" %}
+{% block content %}    
+    <h1>
+    Brief description of the project:
+    </h1>
+    <p>
+    This tool has been developed as a way to analyze tweeter profiles and hashtags using a variety of data mining techniques. 
+    </p>
+    <p>
+    <b>Technologies used and Infrastructure: </b>
+        <li>MongoDB</li>
+        <li>Flask</li>
+        <li>AWS</li>
+    <b>Data mining:</b>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>TensorFlow</li>
+    <b>Dashboard:</b>
+        <li>Dash</li>
+        <li>PlotlyJS</li>
+    <br>
+    <b>How to use it?:</b>
+    <ol>
+        <li>Go to config, select report type and number of tweets to fetch.</li>
+        <li>Type in the user profile or #hashtag to get from Twitter.</li>
+        <li>Click on Save. Now the tool will store this data in MongoDB.</li>
+        <li>Go to Dashboard and select a report from the list to display it.</li>
+        <li>Click on Submit.</li>
+    </ol>
+    </p>
+
+{% endblock %}
