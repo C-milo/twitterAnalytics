@@ -37,13 +37,16 @@ def config():
 @app.route('/report', methods=['GET', 'POST'])
 def report():
       if request.method == 'POST':
-            try:                  
-                  selectedReport = request.form.get('selectedReport').replace("#", "")
-                  reportType = '1'                                 
+            try:                                    
+                  rtype = request.form.get('rtype')
+                  if rtype == '1':
+                        rname = request.form.get('profile_report').replace('#', '')
+                  elif rtype == '0':
+                        rname = request.form.get('hashtag_report').replace('#', '')
             except:
                   make_response('Unsupported request', 400)
             else:                                    
-                  return render_template('dashboard.j2', selectedReport=selectedReport, reportType=reportType)
+                  return render_template('dashboard.j2', rname=rname, rtype=rtype)
       else:            
             reports = MongoDB().get_reports()
             return render_template('report.j2', reports=reports)

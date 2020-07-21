@@ -8,8 +8,8 @@ from tweepy import OAuthHandler
 from pymongo import MongoClient
 from mongoengine import connect, disconnect
 #Custom library
-from twitterAnalytics.model import Tweets
-from twitterAnalytics.model import Config
+from .model import Tweets
+from .model import Config
 
 class MongoDB():
       def db_connect(self):
@@ -19,9 +19,13 @@ class MongoDB():
             return print('connected to', creds['DB_NAME'])
       def get_reports(self):
             self.db_connect()
-            response = []            
-            for report in Config.objects(): # pylint: disable=no-member
-                  response.append(report.report_name)
+            response = []             
+            for obj in Config.objects(): # pylint: disable=no-member
+                  info = {
+                        "rtype": obj.report_type,
+                        "rname": obj.report_name
+                  }
+                  response.append(info)
             disconnect()            
             return response
 

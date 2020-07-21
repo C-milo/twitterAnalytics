@@ -8,40 +8,28 @@ def create_dashboard(server):
     """Create a Plotly Dashboard"""    
     dash_app = dash.Dash(
         server=server,
-        routes_pathname_prefix='/dashapp/'
+        routes_pathname_prefix='/dashapp/',
+        suppress_callback_exceptions=False
     )
     
-    dash_app.layout = html.Div(children=[
-        # html.H1(children='Hours of the day with more activity'),
+    dash_app.layout = html.Div(children=[        
         dcc.Location(id='url', refresh=False),
-        html.H1(children='Tweets overtime:'),
-
-        html.Div(children='''
-            Test: Hours of the day with more activity.
-        '''),
-        html.Div(id='selectedReport'),
-
-        dcc.Graph(
-            id='hours_activity',
-            figure={
-                'data': [
-                    {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-                    {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
-                ],
-                'layout': {
-                    'title': 'Dash Data Visualization'
-                }
-            }
-        )
+        html.Div(id='page-content')
     ])
-
     init_callbacks(dash_app)
-
     return dash_app.server
 
 def init_callbacks(dash_app):
-    @dash_app.callback(dash.dependencies.Output('selectedReport', 'children'), [dash.dependencies.Input('url', 'pathname')])
+    @dash_app.callback(dash.dependencies.Output('page-content', 'children'), [dash.dependencies.Input('url', 'pathname')])
     def display_page(pathname): # pylint: disable=unused-variable
+        rType, rName = clean_pathname(pathname)
         return html.Div([
-            html.H3('Your selected report is {}'.format(pathname))
+            html.H3('Your selected report type is {}'.format(rType)),
+            html.H3('Your report name is {}'.format(rName))
         ])
+
+def clean_pathname(pathname):
+    txt = pathname.replace('/dashapp/', '')
+    rType = txt[0]
+    rName = txt[2:]
+    return rType, rName
