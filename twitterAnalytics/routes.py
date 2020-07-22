@@ -6,8 +6,9 @@ from flask import flash
 from flask import session
 
 # Local library
-from twitterAnalytics.reportConfig import Configurator
-from twitterAnalytics.reportConfig import MongoDB
+from .reportConfig import Configurator
+from .reportConfig import MongoDB
+from .reportAnalysis import analyze
 
 @app.route('/', methods=['GET'])
 def root():
@@ -45,7 +46,8 @@ def report():
                         rname = request.form.get('hashtag_report').replace('#', '')
             except:
                   make_response('Unsupported request', 400)
-            else:                                    
+            else:
+                  analyze(rtype, rname)
                   return render_template('dashboard.j2', rname=rname, rtype=rtype)
       else:            
             reports = MongoDB().get_reports()

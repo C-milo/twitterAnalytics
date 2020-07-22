@@ -9,13 +9,21 @@ from .model import Tweets
 # Hashtag is 0
 # Profile is 1
 
+def analyze(rtype, rname):
+      if rtype == '0':
+            print('Running analysis for a hashtag report')
+      elif rtype == '1':
+            print('Running analysis for a profile report')            
+      else: pass
+      return None
+
 class TweetAnalyzer():
-      def __init__(self, reportName):
+      def __init__(self, rname):
             MongoDB().db_connect()
-            self.reportName = reportName      
+            self.rname = rname      
       def tweets_to_df(self):            
-            db_response = Tweets.objects(search=self.reportName) # pylint: disable=no-member
-            df = pd.DataFrame(data=[tweet.tweet_id for tweet in db_response], columns=['Tweet_ID'])
+            db_response = Tweets.objects(search=self.rname) # pylint: disable=no-member
+            df = pd.DataFrame(data=[tweet.tweet_id for tweet in db_response], columns=['tweet_id'])
             df['report_name'] = np.array([tweet.search for tweet in db_response]) 
             df['location'] = np.array([tweet.location for tweet in db_response])
             df['created_at'] = np.array([tweet.created_at for tweet in db_response])
