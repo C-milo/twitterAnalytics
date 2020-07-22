@@ -1,11 +1,13 @@
 # Local libraries:
-import json
-#Third party libraries:
+# Third party libraries:
 import pandas as pd
 import numpy as np
-#Custom Libraries:
-from twitterAnalytics.reportConfig import MongoDB
-from twitterAnalytics.model import Tweets
+# Custom Libraries:
+from .reportConfig import MongoDB
+from .model import Tweets
+
+# Hashtag is 0
+# Profile is 1
 
 class TweetAnalyzer():
       def __init__(self, reportName):

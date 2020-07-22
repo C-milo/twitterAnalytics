@@ -22,14 +22,19 @@ def create_dashboard(server):
 def init_callbacks(dash_app):
     @dash_app.callback(dash.dependencies.Output('page-content', 'children'), [dash.dependencies.Input('url', 'pathname')])
     def display_page(pathname): # pylint: disable=unused-variable
-        rType, rName = clean_pathname(pathname)
-        return html.Div([
-            html.H3('Your selected report type is {}'.format(rType)),
-            html.H3('Your report name is {}'.format(rName))
+        if pathname:
+            parms = clean_pathname(pathname)
+            return html.Div([
+            html.H3('Your selected report type is {}'.format(parms['rName'])),
+            html.H3('Your report name is {}'.format(parms['rType']))
         ])
-
+        else:
+            return None
+        
 def clean_pathname(pathname):
     txt = pathname.replace('/dashapp/', '')
-    rType = txt[0]
-    rName = txt[2:]
-    return rType, rName
+    response = {
+        "rType": txt[0],
+        "rName": txt[2:]
+    }    
+    return response

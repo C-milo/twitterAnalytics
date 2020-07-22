@@ -20,14 +20,14 @@
       </div>
     </fieldset>
     <label for="selectedReport">Select your report:</label>    
-    <select class="form-control" id="0" name="hashtag_report" style="visibility:hidden">
+    <select class="form-control" id="0" name="hashtag_report" style="display:none">
       {% for r in reports %}
         {% if r['rtype'] == 0 %}
           <option value="{{ r['rname'] }}">{{ r['rname'] }}</option>
         {% endif %}
       {% endfor%}
     </select>
-    <select class="form-control" id="1" name="profile_report" style="visibility:visible">
+    <select class="form-control" id="1" name="profile_report" style="display:inline">
       {% for r in reports %}
         {% if r['rtype'] == 1 %}
           <option value="{{ r['rname'] }}">{{ r['rname'] }}</option>
@@ -36,18 +36,5 @@
     </select>
     <button type="submit" class="btn btn-success"/>Submit      
   </form>
-  <script>
-    function changeOptions(selectEl) {
-      let selectedValue = selectEl.value;
-      let subForms = document.getElementsByClassName('form-control')
-      for (let i = 0; i < subForms.length; i += 1) {
-        if (selectedValue === subForms[i].id) {
-          subForms[i].setAttribute('style', 'display:inline')
-        } 
-        else {
-          subForms[i].setAttribute('style', 'display:none') 
-        }
-      }
-    }
-  </script>
+  <script type="text/javascript" src="static/js/report.js" async defer></script>
 {% endblock %}
