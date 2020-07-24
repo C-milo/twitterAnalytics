@@ -25,7 +25,7 @@ def init_callbacks(dash_app):
         if pathname:
             parms = clean_pathname(pathname)
             return html.Div([
-            html.H3('Your selected report type is {}'.format(parms['rName'])),
+            html.H3('Your selected report type is {}'.format(parms['kWord'])),
             html.H3('Your report name is {}'.format(parms['rType']))
         ])
         else:
@@ -35,6 +35,6 @@ def clean_pathname(pathname):
     txt = pathname.replace('/dashapp/', '')
     response = {
         "rType": txt[0],
-        "rName": txt[2:]
+        "kWord": txt[2:]
     }    
     return response

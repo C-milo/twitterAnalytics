@@ -8,7 +8,7 @@ from flask import session
 # Local library
 from .reportConfig import Configurator
 from .reportConfig import MongoDB
-from .reportAnalysis import analyze
+from .reportAnalysis import TweetAnalyzer
 
 @app.route('/', methods=['GET'])
 def root():
@@ -18,14 +18,14 @@ def root():
 def config():
       if request.method == 'POST':
             try:
-                  lword = request.form.get('lword').lower()
+                  key_word = request.form.get('key_word').lower()
                   reportType = request.form.get('reportType')
                   numTweets = request.form.get('numTweets')
             except:
                   make_response('Unsupported request', 400)
             else:
                   conf = Configurator(
-                        lword=lword, 
+                        key_word=key_word, 
                         reportType=reportType,
                         numTweets=numTweets
                         )
@@ -41,14 +41,15 @@ def report():
             try:                                    
                   rtype = request.form.get('rtype')
                   if rtype == '1':
-                        rname = request.form.get('profile_report').replace('#', '')
+                        kword = request.form.get('profile_report')
                   elif rtype == '0':
-                        rname = request.form.get('hashtag_report').replace('#', '')
+                        kword = request.form.get('hashtag_report')
             except:
                   make_response('Unsupported request', 400)
             else:
-                  analyze(rtype, rname)
-                  return render_template('dashboard.j2', rname=rname, rtype=rtype)
+                  ana = TweetAnalyzer(rtype=rtype, kword=kword)
+                  ana.analyze()
+                  return render_template('dashboard.j2', kword=kword.replace('#', ''), rtype=rtype)
       else:            
             reports = MongoDB().get_reports()
             return render_template('report.j2', reports=reports)

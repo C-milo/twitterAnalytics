@@ -2,7 +2,7 @@ import mongoengine as me
 
 class Tweets(me.DynamicDocument):
     tweet_id = me.IntField(unique=True)
-    search = me.StringField(required=True)
+    key_word = me.StringField(required=True)
     username = me.StringField()
     location = me.StringField()
     created_at = me.DateTimeField()
@@ -18,7 +18,7 @@ class Tweets(me.DynamicDocument):
     quoted_text = me.StringField(default='None')    
     #Is Retweet
     is_retweet = me.StringField(default='False')
-    retweet_text = me.StringField()
+    retweet_text = me.StringField(default='None')
     retweet_id = me.IntField()
     retweet_user = me.StringField(default='None')    
     #Has Media
@@ -27,4 +27,4 @@ class Tweets(me.DynamicDocument):
 
 class Config(me.Document):    
     report_type = me.IntField(required=True)
-    report_name = me.StringField(max_lenght=80, required=True, unique=True)
+    key_word = me.StringField(max_lenght=80, required=True, unique=True)

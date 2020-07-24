@@ -1,5 +1,6 @@
 #Local library
 import json
+import sys
 #Third Party libraries
 import tweepy
 from tweepy import API
@@ -23,23 +24,23 @@ class MongoDB():
             for obj in Config.objects(): # pylint: disable=no-member
                   info = {
                         "rtype": obj.report_type,
-                        "rname": obj.report_name
+                        "kword": obj.key_word
                   }
                   response.append(info)
             disconnect()            
             return response
 
 class Configurator():
-      def __init__(self, lword, reportType, numTweets=1):            
+      def __init__(self, key_word, reportType, numTweets=1):            
             MongoDB().db_connect()
-            self.lword = lword
+            self.key_word = key_word
             self.numTweets = int(numTweets)
             self.reportType = int(reportType)
       def saveConfig(self):
             try:          
                   Config(
                         report_type = self.reportType,                                                       
-                        report_name = self.lword
+                        key_word = self.key_word
                   ).save()
                   msg = print('Configuration saved.')
             except: 
@@ -49,7 +50,7 @@ class Configurator():
             for tweet in tweets:                  
                   tw = Tweets(
                         tweet_id = tweet._json['id'],
-                        search = self.lword,
+                        key_word = self.key_word,
                         username = tweet._json['user']['screen_name'],
                         location = tweet._json['user']['location'],
                         created_at = tweet._json['created_at'],
@@ -76,7 +77,7 @@ class Configurator():
                   if "extended_entities" in tweet._json:
                         print('tweet_id ', tweet._json['id'], 'has media')
                         tw.has_media = 'True'
-                        if "dditional_media_info" in tweet._json:
+                        if "additional_media_info" in tweet._json:
                               tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
                         else: pass
                         tw.media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
@@ -85,7 +86,7 @@ class Configurator():
                   try:                         
                         tw.save()
                         print('saved tweet_id', tweet._json['id'])                                          
-                  except:
+                  except:                        
                         print('skipping duplicate tweet_id', tweet._json['id'])
                         continue
             return print('Tweets saved.')
@@ -97,19 +98,19 @@ class Configurator():
             func = switcher.get(self.reportType)      
             return func()
       def isHashtag(self):            
-            tc = TwitterClient(hashtag=self.lword)
+            tc = TwitterClient(hashtag=self.key_word)
             tweets = tc.get_hashtag_tweets(self.numTweets)            
             self.saveTweets(tweets)                              
             self.saveConfig()
             disconnect()
-            return print('hashtag report can now be generated for',self.lword)
+            return print('hashtag report can now be generated for',self.key_word)
       def isProfile(self):
-            tc = TwitterClient(user=self.lword)
+            tc = TwitterClient(user=self.key_word)
             tweets = tc.get_user_timeline_tweets(self.numTweets)
             self.saveTweets(tweets)
             self.saveConfig()
             disconnect()
-            return print('profile report can now be generated for ',self.lword)      
+            return print('profile report can now be generated for ',self.key_word)      
       
 class TwitterAuthenticator():
       def authenticate_twitter_app(self):
@@ -139,5 +140,5 @@ class TwitterClient():
             return tweets
 
 # if __name__ == "__main__":
-#       cf = Configurator(lword='#ElDiaMasFelizDeMiVida', reportType='0')
+#       cf = Configurator(key_word='#ElDiaMasFelizDeMiVida', reportType='0')
 #       cf.readParameters()
