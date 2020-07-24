@@ -17,13 +17,13 @@ class TweetAnalyzer():
       def analyze(self):
             if self.rtype == '0':
                   print('Running analysis for a hashtag report')
-                  self.create_multiuse_df()
+                  self.create_general_df()
             elif self.rtype == '1':
                   print('Running analysis for a profile report')
-                  self.create_multiuse_df()
+                  self.create_general_df()
             else: pass
             return None      
-      def create_multiuse_df(self):            
+      def create_general_df(self):            
             db_response = Tweets.objects(key_word=self.kword) # pylint: disable=no-member
             df = pd.DataFrame(data=[tweet.tweet_id for tweet in db_response], columns=['tweet_id'])
             df['key_word'] = np.array([tweet.key_word for tweet in db_response])
@@ -40,7 +40,7 @@ class TweetAnalyzer():
             df['retweet_id'] = np.array([tweet.retweet_id for tweet in db_response])
             df['retweet_user'] = np.array([tweet.retweet_user for tweet in db_response])
             df['has_media'] = np.array([tweet.has_media for tweet in db_response])
-            self.create_csv(df=df, table_name='multiuse')
+            self.create_csv(df=df, table_name='general')
             return None
       def create_csv(self, df, table_name):
             path_to_file = './twitterAnalytics/plotydash/data/' + self.rtype + '/'

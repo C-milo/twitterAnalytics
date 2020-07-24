@@ -7,7 +7,7 @@ from tweepy import API
 from tweepy import Cursor
 from tweepy import OAuthHandler
 from pymongo import MongoClient
-from mongoengine import connect, disconnect
+from mongoengine import connect, disconnect, errors
 #Custom library
 from .model import Tweets
 from .model import Config
@@ -81,14 +81,13 @@ class Configurator():
                               tw.media_title = tweet._json['extended_entities']['media'][0]['additional_media_info']['title']
                         else: pass
                         tw.media_expanded_url = tweet._json['extended_entities']['media'][0]['expanded_url']
-                  else: pass
-                  print('saving tweet_id:', tweet._json['id'])
+                  else: pass                  
                   try:                         
                         tw.save()
                         print('saved tweet_id', tweet._json['id'])                                          
-                  except:                        
+                  except errors.NotUniqueError:                        
                         print('skipping duplicate tweet_id', tweet._json['id'])
-                        continue
+                        continue                                          
             return print('Tweets saved.')
       def readParameters(self):
             switcher={
@@ -130,13 +129,19 @@ class TwitterClient():
             return self.api
       def get_user_timeline_tweets(self, num_tweets):
             tweets = []
+            count = 0
             for tweet in Cursor(self.api.user_timeline, id=self.user, tweet_mode="extended").items(num_tweets):
+                  count += 1
                   tweets.append(tweet)
+            print('tweets fetched: ', count)
             return tweets
       def get_hashtag_tweets(self, num_tweets):
             tweets = []
-            for tweet in Cursor(self.api.search, q=self.hashtag, result_type="popular", tweet_mode="extended").items(num_tweets):                 
+            count= 0
+            for tweet in Cursor(self.api.search, q=self.hashtag, result_type="popular", tweet_mode="extended").items(num_tweets):
+                  count += 1
                   tweets.append(tweet)
+            print('tweets fetched: ', count)
             return tweets
 
 # if __name__ == "__main__":
