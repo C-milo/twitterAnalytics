@@ -98,17 +98,19 @@ class Configurator():
             return func()
       def isHashtag(self):            
             tc = TwitterClient(hashtag=self.key_word)
-            tweets = tc.get_hashtag_tweets(self.numTweets)            
+            tweets, count = tc.get_hashtag_tweets(self.numTweets)            
             self.saveTweets(tweets)                              
             self.saveConfig()
             disconnect()
+            print('tweets fetched: ', count)
             return print('hashtag report can now be generated for',self.key_word)
       def isProfile(self):
             tc = TwitterClient(user=self.key_word)
-            tweets = tc.get_user_timeline_tweets(self.numTweets)
+            tweets, count = tc.get_user_timeline_tweets(self.numTweets)
             self.saveTweets(tweets)
             self.saveConfig()
             disconnect()
+            print('tweets fetched: ', count)
             return print('profile report can now be generated for ',self.key_word)      
       
 class TwitterAuthenticator():
@@ -132,17 +134,15 @@ class TwitterClient():
             count = 0
             for tweet in Cursor(self.api.user_timeline, id=self.user, tweet_mode="extended").items(num_tweets):
                   count += 1
-                  tweets.append(tweet)
-            print('tweets fetched: ', count)
-            return tweets
+                  tweets.append(tweet)            
+            return tweets, count
       def get_hashtag_tweets(self, num_tweets):
             tweets = []
             count= 0
-            for tweet in Cursor(self.api.search, q=self.hashtag, result_type="popular", tweet_mode="extended").items(num_tweets):
+            for tweet in Cursor(self.api.search, q=self.hashtag, result_type="mixed", tweet_mode="extended").items(num_tweets):
                   count += 1
-                  tweets.append(tweet)
-            print('tweets fetched: ', count)
-            return tweets
+                  tweets.append(tweet)            
+            return tweets, count
 
 # if __name__ == "__main__":
 #       cf = Configurator(key_word='#ElDiaMasFelizDeMiVida', reportType='0')

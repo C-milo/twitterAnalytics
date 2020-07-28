@@ -47,3 +47,205 @@ tweet_id,key_word,username,location,created_at,favorite_count,retweet_count,leng
 1283466565812457477,#colombia,CMILANOTICIA,"Bogotá, Colombia",2020-07-15 18:20:49,95,46,146,es,False,None,False,,None,False
 1283448606817689602,#colombia,teleSURtv,Caracas,2020-07-15 17:09:27,18,37,190,es,False,None,False,,None,False
 1283460210980519936,#colombia,ActivistaCo,"Bogotá, D.C., Colombia",2020-07-15 17:55:34,28,17,303,es,False,None,False,,None,True
+1286664463370919937,#colombia,CIDH,Washington D.C.,2020-07-24 14:08:07,36,41,278,es,False,None,False,,None,False
+1285728467800252419,#colombia,VTVcanal8,Venezuela,2020-07-22 00:08:49,30,108,219,es,False,None,False,,None,True
+1287433640494931968,#colombia,MariaFdaCabal,"Bogotá, Colombia ",2020-07-26 17:04:33,2694,1450,207,es,False,None,False,,None,False
+1287509130991874051,#colombia,ErikaOSanoja,"Caracas, Venezuela",2020-07-26 22:04:32,242,311,277,es,False,None,False,,None,False
+1287114937354137600,#colombia,PanAmPost_es,"Miami, FL",2020-07-25 19:58:09,236,438,135,es,False,None,False,,None,False
+1287754760393764864,#colombia,BrettEHouse,Territory of the Mississaugas,2020-07-27 14:20:34,0,0,228,en,True,ScotiaEconomics,False,,None,False
+1287754615258140672,#colombia,ElUniversalCtg,"Cartagena, Colombia",2020-07-27 14:20:00,0,0,145,es,False,None,False,,None,False
+1287754380503060480,#colombia,MedellinGuru,"Medellín, Colombia",2020-07-27 14:19:04,0,0,297,en,False,None,False,,None,True
+1287754373649649664,#colombia,eltiempolatino,Washington D.C.,2020-07-27 14:19:02,0,0,135,es,False,None,False,,None,True
+1287754270608154625,#colombia,JMC_SAS,"Valledupar, Colombia",2020-07-27 14:18:38,0,0,297,es,False,None,False,,None,True
+1287754201582403587,#colombia,venaycia,"Medellin, Colombia",2020-07-27 14:18:21,0,0,304,es,False,None,False,,None,True
+1287754094036254725,#colombia,BrettEHouse,Territory of the Mississaugas,2020-07-27 14:17:55,0,0,308,en,True,ScotiaEconomics,False,,None,False
+1287753969264209920,#colombia,Akuaroochun,Caracas ,2020-07-27 14:17:26,0,0,232,es,False,None,False,,None,False
+1287753953489362946,#colombia,Meli_8ar,Colombia,2020-07-27 14:17:22,0,0,290,es,False,None,False,,None,False
+1287753801248788480,#colombia,GELM1980,COLOMBIA,2020-07-27 14:16:46,0,0,267,es,False,None,False,,None,False
+1287753739558887428,#colombia,lanuevaprensaco,Colombia,2020-07-27 14:16:31,5,1,182,es,False,None,False,,None,False
+1287753704549093379,#colombia,HenryMolano1,Bogota. Colombia,2020-07-27 14:16:23,0,0,297,es,True,Agencia_API,False,,None,False
+1287114720818782213,#colombia,02_mafe,,2020-07-25 19:57:17,6,4,167,es,False,None,False,,None,True
+1287114682046742532,#colombia,meganbecket1,,2020-07-25 19:57:08,0,1,256,en,False,None,False,,None,True
+1287114441130233870,#colombia,luchoparadafilm,COLOMBIA,2020-07-25 19:56:10,1,0,85,es,False,None,False,,None,False
+1287114204688850944,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:55:14,1,1,273,es,False,None,False,,None,True
+1287114168177393664,#colombia,WorldFairness,,2020-07-25 19:55:05,1,0,256,es,True,AnasofiSan,False,,None,False
+1287113884797669376,#colombia,Alejandra_B99,,2020-07-25 19:53:58,0,0,186,es,False,None,False,,None,False
+1287113708540436481,#colombia,elojoiluso,"Táchira, Venezuela",2020-07-25 19:53:16,3,2,240,es,False,None,False,,None,True
+1287113599886950402,#colombia,SergioVelHe,,2020-07-25 19:52:50,0,0,240,es,False,None,False,,None,False
+1287113584716034050,#colombia,andresglede04,"Cali, Colombia",2020-07-25 19:52:46,0,0,293,es,False,None,False,,None,True
+1287113401962045440,#colombia,ASOTIC,Bogotá,2020-07-25 19:52:03,1,0,302,es,False,None,False,,None,True
+1287112881474023426,#colombia,RedMasNoticias,Colombia,2020-07-25 19:49:59,6,4,303,es,False,None,False,,None,True
+1287112565823348739,#colombia,medicalbook1,United States,2020-07-25 19:48:43,0,0,279,und,False,None,False,,None,False
+1287112559032770561,#colombia,DrATEFAHMED,,2020-07-25 19:48:42,1,0,279,und,False,None,False,,None,False
+1287112387066245122,#colombia,dayroncorrea,bogota,2020-07-25 19:48:01,0,0,267,es,False,None,False,,None,True
+1287112107373322241,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:46:54,1,1,284,es,False,None,False,,None,True
+1287112074498318336,#colombia,livemodelsco,,2020-07-25 19:46:46,1,0,270,es,False,None,False,,None,True
+1287111971175911424,#colombia,livemodelsco,,2020-07-25 19:46:21,1,0,272,es,False,None,False,,None,True
+1287111870462205954,#colombia,Minvivienda,"Bogotá, D.C. - Colombia",2020-07-25 19:45:57,12,11,209,es,False,None,False,,None,True
+1287111701519900673,#colombia,Jvalencia_1988,"Mosquera, Colombia",2020-07-25 19:45:17,0,0,189,es,False,None,False,,None,False
+1287111693005447174,#colombia,galindobvolley,Colombia,2020-07-25 19:45:15,8,3,177,und,False,None,False,,None,True
+1287111659178401794,#colombia,MarthaToQui2015,"Tunja, Colombia",2020-07-25 19:45:07,1,0,94,es,False,None,False,,None,True
+1287111621316349952,#colombia,livemodelsco,,2020-07-25 19:44:58,1,0,269,es,False,None,False,,None,True
+1287111564080881666,#colombia,VerdeNuestra,,2020-07-25 19:44:44,0,0,104,es,False,None,False,,None,True
+1287111533538037760,#colombia,radio580nic,Managua,2020-07-25 19:44:37,0,0,287,es,False,None,False,,None,True
+1287111356391407616,#colombia,crl_legal,"Bogotá, D.C., Colombia",2020-07-25 19:43:55,1,1,266,es,False,None,False,,None,True
+1287111058814054400,#colombia,JCESAROCK,,2020-07-25 19:42:44,1,0,155,und,False,None,False,,None,True
+1287110955923578882,#colombia,Anthony91040345,"Bucaramanga, Colombia",2020-07-25 19:42:19,0,0,91,es,False,None,False,,None,False
+1287110921295261696,#colombia,cpboosters,,2020-07-25 19:42:11,2,1,266,es,False,None,False,,None,True
+1287110827875729409,#colombia,JCESAROCK,,2020-07-25 19:41:49,0,0,140,und,False,None,False,,None,True
+1287110806824464384,#colombia,PabloGerardoM,Venezuela,2020-07-25 19:41:44,0,0,161,es,False,None,False,,None,False
+1287110734976102400,#colombia,IBSENMARTINEZ,"Bogotá, D.C., Colombia",2020-07-25 19:41:27,2,1,97,es,True,BruceMacMaster,False,,None,False
+1287110719771742214,#colombia,jdkellyg,Colombia,2020-07-25 19:41:23,0,0,237,es,False,None,False,,None,False
+1287110719247470592,#colombia,Mapachote,De Bucaramanga mano!,2020-07-25 19:41:23,4,0,280,es,False,None,False,,None,True
+1287110686582149120,#colombia,JoemHombre,"Envigado, Colombia",2020-07-25 19:41:15,2,1,111,es,False,None,False,,None,True
+1287110668391514112,#colombia,jdkellyg,Colombia,2020-07-25 19:41:11,0,0,237,es,False,None,False,,None,False
+1287110551865360385,#colombia,JCESAROCK,,2020-07-25 19:40:43,0,0,155,und,False,None,False,,None,True
+1287110511532875780,#colombia,aeresanal,"Pereira, Colombia",2020-07-25 19:40:33,2,0,322,es,True,HistoriaNG,False,,None,True
+1287110411549057024,#colombia,umbv_einf,"Caracas, Venezuela",2020-07-25 19:40:10,12,19,275,es,False,None,False,,None,True
+1287110405186293760,#colombia,ogroge,en un 79% los trancones de Bog,2020-07-25 19:40:08,0,0,187,es,False,None,False,,None,False
+1287110392800567296,#colombia,JCESAROCK,,2020-07-25 19:40:05,0,0,155,und,False,None,False,,None,True
+1287110145705639942,#colombia,JCESAROCK,,2020-07-25 19:39:06,0,0,117,und,False,None,False,,None,True
+1287110118270627840,#colombia,ramirociencia,"Medellin, Colombia",2020-07-25 19:39:00,0,0,72,es,False,None,False,,None,False
+1287109916700872704,#colombia,JCESAROCK,,2020-07-25 19:38:12,2,0,134,und,False,None,False,,None,True
+1287109721011478530,#colombia,bonitaguiagay,"Bucaramanga, Colombia",2020-07-25 19:37:25,1,1,157,es,True,AlcaldiaBGA,False,,None,False
+1287109588123365381,#colombia,JCESAROCK,,2020-07-25 19:36:53,2,0,155,und,False,None,False,,None,True
+1287109572566691840,#colombia,Mapamo0,"Bogotá, Colombia",2020-07-25 19:36:50,0,0,191,es,False,None,False,,None,False
+1287109489972383744,#colombia,SoymaryYluz,𝓒𝓸𝓵𝓸𝓶𝓫𝓲𝓪-𝓑𝓸𝓰𝓸𝓽𝓪 ,2020-07-25 19:36:30,1,0,292,es,False,None,False,,None,True
+1287109398813433857,#colombia,GeoProLR1,"Cali, Colombia",2020-07-25 19:36:08,10,3,227,es,False,None,False,,None,True
+1287109353665957890,#colombia,JCESAROCK,,2020-07-25 19:35:57,2,0,111,und,False,None,False,,None,True
+1287109314973519881,#colombia,Macneira,Bogota,2020-07-25 19:35:48,0,0,67,und,False,None,False,,None,False
+1287109290642345984,#colombia,KivainStickers,,2020-07-25 19:35:42,0,0,295,und,False,None,False,,None,True
+1287109196245274631,#colombia,HeidiRaimondo,"Rio Tercero , Córdoba.",2020-07-25 19:35:20,3,0,182,es,False,None,False,,None,False
+1287109126330277888,#colombia,RADIOHIPICO,,2020-07-25 19:35:03,0,2,264,es,True,PublicidadSinL2,False,,None,False
+1287109089684869121,#colombia,ChristianEuska,,2020-07-25 19:34:54,7,7,303,es,False,None,False,,None,True
+1287109002233614336,#colombia,aerooriente,En 5 departamentos de Colombia,2020-07-25 19:34:34,4,1,278,es,False,None,False,,None,False
+1287108944175955969,#colombia,lvalenciarivera,"London, England",2020-07-25 19:34:20,0,0,119,es,False,None,False,,None,False
+1287108721689198592,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:33:27,1,1,278,es,False,None,False,,None,True
+1287108286525968384,#colombia,licosabana,"Sincelejo, Colombia",2020-07-25 19:31:43,1,0,162,es,False,None,False,,None,True
+1287108162282295296,#colombia,JuanchoHO,"Medellín, Colombia.",2020-07-25 19:31:13,0,0,257,es,False,None,False,,None,False
+1287107219411140609,#colombia,Qromal,Colombia,2020-07-25 19:27:29,0,1,295,es,True,vegavvictor,False,,None,False
+1287107155158601730,#colombia,Official_Rode,Colombia,2020-07-25 19:27:13,0,0,268,es,False,None,False,,None,False
+1287107153057153037,#colombia,licosinu,"Montería, Colombia",2020-07-25 19:27:13,6,0,172,es,False,None,False,,None,True
+1287107107683262468,#colombia,gaycolombia11,,2020-07-25 19:27:02,347,33,90,es,False,None,False,,None,True
+1287106783102865408,#colombia,KimAndy17270019,,2020-07-25 19:25:45,0,0,71,es,False,None,False,,None,False
+1287106535764746252,#colombia,Official_Rode,Colombia,2020-07-25 19:24:46,1,0,291,es,False,None,False,,None,True
+1287106399986647041,#colombia,Giljose1111,,2020-07-25 19:24:13,4,2,257,es,True,ElQueLosDELATA,False,,None,False
+1287106384065069058,#colombia,AndreaR40560260,,2020-07-25 19:24:09,2,0,221,es,False,None,False,,None,False
+1287106188782510080,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:23:23,2,1,290,fi,False,None,False,,None,True
+1287106003608244224,#colombia,Arteyacccesorio,"Ibagué, Colombia",2020-07-25 19:22:39,1,0,93,es,False,None,False,,None,True
+1287105807168004098,#colombia,ComandoSalsa,"Santo Domingo, Dominican Repub",2020-07-25 19:21:52,0,0,235,und,False,None,False,,None,False
+1287105173949763600,#colombia,DJ_Hany_Hassan,EGYPT-CAIRO,2020-07-25 19:19:21,0,0,238,en,False,None,False,,None,False
+1287105141607473155,#colombia,GruposdeWhatsap,,2020-07-25 19:19:13,0,0,279,es,False,None,False,,None,False
+1287104995075203072,#colombia,MundialCancha,,2020-07-25 19:18:38,0,0,249,es,False,None,False,,None,True
+1287104929878798342,#colombia,Peterbruijns,Brunssum,2020-07-25 19:18:23,4,0,91,nl,False,None,False,,None,False
+1287104605034356736,#colombia,GeoProLR1,"Cali, Colombia",2020-07-25 19:17:05,16,1,220,es,False,None,False,,None,True
+1287104597002248194,#colombia,MaerQuintero,"Pachavita, Colombia",2020-07-25 19:17:03,0,0,280,es,False,None,False,,None,False
+1287104503624368128,#colombia,ComandoSalsa,"Santo Domingo, Dominican Repub",2020-07-25 19:16:41,0,0,240,es,False,None,False,,None,False
+1287104313249222656,#colombia,cartel538,Colombia/Bogota-cundinamarca,2020-07-25 19:15:56,0,0,205,es,False,None,False,,None,True
+1287103948172808193,#colombia,Annette_Taddeo,"Miami, FL",2020-07-25 19:14:29,11,6,266,es,False,None,False,,None,True
+1287103457145610241,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:12:32,1,1,275,es,False,None,False,,None,True
+1287103177679163393,#colombia,Monknk1,,2020-07-25 19:11:25,1,1,983,es,False,None,False,,None,False
+1287103093595938827,#colombia,cubillosygarcia,"Bogotá, D.C., Colombia",2020-07-25 19:11:05,0,0,147,es,False,None,False,,None,True
+1287102820395520000,#colombia,diarioelfrente,"Bucaramanga, Santander",2020-07-25 19:10:00,0,0,197,es,False,None,False,,None,False
+1287102786698653699,#colombia,rijapmena,Mi casa,2020-07-25 19:09:52,1,0,239,es,False,None,False,,None,False
+1287102362071506944,#colombia,Alberto_Leiva_,vigo ,2020-07-25 19:08:10,1,0,239,es,False,None,False,,None,False
+1287102334703632384,#colombia,pulpitoalagalle,,2020-07-25 19:08:04,1,0,95,und,False,None,False,,None,True
+1287102129132515328,#colombia,chamarivero,La luna,2020-07-25 19:07:15,1,0,154,es,False,None,False,,None,False
+1287101986861658114,#colombia,LlamadoBestia,"México,Df",2020-07-25 19:06:41,0,0,258,es,False,None,False,,None,False
+1287101826865790977,#colombia,ExtraColombia,"Bogotá, D.C., Colombia",2020-07-25 19:06:03,0,0,113,es,False,None,False,,None,False
+1287101826018533376,#colombia,HSBnoticias,Bogotá - Colombia,2020-07-25 19:06:03,0,0,113,es,False,None,False,,None,False
+1287101748658802691,#colombia,PilasColombia,Colombia,2020-07-25 19:05:44,1,0,265,es,False,None,False,,None,False
+1287101440272609282,#colombia,neouribe,,2020-07-25 19:04:31,3,0,61,und,False,None,False,,None,True
+1287101381615263744,#colombia,barroso_omar,bucaramanga,2020-07-25 19:04:17,0,0,191,es,False,None,False,,None,False
+1287101070230118403,#colombia,Naly2010,"Baranquilla, Colombia",2020-07-25 19:03:02,0,0,284,es,False,None,False,,None,False
+1287101058469298177,#colombia,fidox7up,Antofagasta,2020-07-25 19:03:00,0,0,102,es,False,None,False,,None,True
+1287100908501970945,#colombia,caag_1991,"Cali, Colombia",2020-07-25 19:02:24,0,0,149,es,True,gdgmed,False,,None,False
+1287100379621195778,#colombia,Tenebrero76,"Bogota, Colombia",2020-07-25 19:00:18,1,1,298,en,False,None,False,,None,True
+1287100306078171136,#colombia,Las2Orillas,,2020-07-25 19:00:00,3,1,155,es,False,None,False,,None,False
+1287100304899616769,#colombia,periodispublico,"Soacha, Colombia",2020-07-25 19:00:00,2,0,201,es,False,None,False,,None,True
+1287100153858527237,#colombia,RucoVirus,"Philadelphia, PA",2020-07-25 18:59:24,0,0,124,es,False,None,False,,None,False
+1287099638818930691,#colombia,nhopaca,Cúcuta - Colombia,2020-07-25 18:57:21,1,1,299,es,False,None,False,,None,True
+1287099510481657858,#colombia,RucoVirus,"Philadelphia, PA",2020-07-25 18:56:51,1,0,115,es,False,None,False,,None,False
+1287099464143056896,#colombia,YoSoyDanteEJC,"Bogotá, D.C., Colombia",2020-07-25 18:56:40,27,20,251,es,False,None,False,,None,True
+1287099329954615301,#colombia,Sexcriminals69,"Yumbo, Colombia",2020-07-25 18:56:08,2,0,246,es,False,None,False,,None,True
+1287099328935452678,#colombia,rumberbis,"Cúcuta, Norte de Santander",2020-07-25 18:56:07,0,0,81,es,False,None,False,,None,False
+1287099221359960064,#colombia,RucoVirus,"Philadelphia, PA",2020-07-25 18:55:42,0,0,84,es,False,None,False,,None,False
+1287099188946317313,#colombia,NohraVelez,"Comunidad de Madrid, España",2020-07-25 18:55:34,0,0,52,und,False,None,False,,None,True
+1287099052040032257,#colombia,dejanirasilveir,,2020-07-25 18:55:01,73,127,303,es,False,None,False,,None,True
+1287098944472748032,#colombia,johnnysart1986,"phoenix,az",2020-07-25 18:54:36,1,0,172,und,False,None,False,,None,True
+1287098904723554307,#colombia,DazPinzon,Bogota Colombia,2020-07-25 18:54:26,0,0,178,pt,False,None,False,,None,True
+1287098690272931840,#colombia,Paul045henry01,Antioquia ,2020-07-25 18:53:35,8,2,283,es,False,None,False,,None,True
+1287098663072944128,#colombia,JohnnBack,Latinoamérica,2020-07-25 18:53:29,1,0,151,es,True,MJDuzan,False,,None,False
+1287098195907162113,#colombia,AndresCol2020,,2020-07-25 18:51:37,0,0,161,es,False,None,False,,None,False
+1287098130585079809,#colombia,RegaderaWeb,Caracas - Venezuela,2020-07-25 18:51:22,0,0,114,es,False,None,False,,None,False
+1287098122074808324,#colombia,tecsolss,"Bogotá, D.C., Colombia",2020-07-25 18:51:20,11,10,327,es,False,None,False,,None,True
+1287097817723527171,#colombia,IndisolCol,"Bogotá, D.C., Colombia",2020-07-25 18:50:07,11,11,328,es,False,None,False,,None,True
+1287097239811379201,#colombia,Ecodigsol,"Bogotá, D.C., Colombia",2020-07-25 18:47:49,11,10,325,es,False,None,False,,None,True
+1287097073305817088,#colombia,sopabuvi,"Bogotá, D.C., Colombia",2020-07-25 18:47:10,11,10,292,es,False,None,False,,None,False
+1287097055467515905,#colombia,pulpitoalagalle,,2020-07-25 18:47:05,0,0,93,und,False,None,False,,None,True
+1287096595092312069,#colombia,UPTTMBI,Estado Trujillo,2020-07-25 18:45:16,0,0,143,und,False,None,False,,None,False
+1287096509117464578,#colombia,Psicoasocia,"Santa Marta, Colombia",2020-07-25 18:44:55,1,1,198,es,False,None,False,,None,False
+1287096469481304064,#colombia,DonGuillermoPac,,2020-07-25 18:44:46,5,2,87,es,True,German_valen_CT,False,,None,False
+1287096416012304385,#colombia,INFOmailiTV,Buenos Aires,2020-07-25 18:44:33,0,0,236,es,False,None,False,,None,True
+1287096298965958659,#colombia,MedellinGuru,"Medellín, Colombia",2020-07-25 18:44:05,1,0,297,en,False,None,False,,None,True
+1287096291235954690,#colombia,ElChayannEmilio,"Medellín, Colombia",2020-07-25 18:44:03,0,0,56,und,False,None,False,,None,True
+1287096203948285952,#colombia,DanielGuardiaB,"Barranquilla, Colombia",2020-07-25 18:43:42,0,0,254,es,False,None,False,,None,False
+1287096173459902464,#colombia,tuttobiciweb_it,Italy,2020-07-25 18:43:35,9,1,234,it,False,None,False,,None,False
+1287096098713034752,#colombia,rayleon1515,,2020-07-25 18:43:17,0,0,210,es,False,None,False,,None,False
+1287096098704719872,#colombia,simonpregonero1,,2020-07-25 18:43:17,0,0,85,es,False,None,False,,None,True
+1287096084754386944,#colombia,miboyaca_co,Boyaca,2020-07-25 18:43:14,5,1,233,es,False,None,False,,None,True
+1287096071605366784,#colombia,anher_ch,"Bogotá, D.C., Colombia",2020-07-25 18:43:11,0,0,145,es,True,lafm,False,,None,False
+1287095877446832131,#colombia,MedellinGuru,"Medellín, Colombia",2020-07-25 18:42:24,6,0,279,en,False,None,False,,None,True
+1287095756453752832,#colombia,MiserSr,"Bogotá, #Américas y #Universal",2020-07-25 18:41:56,1,0,303,es,False,None,False,,None,False
+1287095686656397312,#colombia,bravorubendario,"Bogotá, D.C., Colombia",2020-07-25 18:41:39,1,0,271,es,False,None,False,,None,False
+1287095539268452354,#colombia,EdgarGomezsan,Colombia,2020-07-25 18:41:04,3,2,153,es,True,ElQueLosDELATA,False,,None,False
+1287095360079486977,#colombia,DonGuillermoPac,,2020-07-25 18:40:21,0,0,40,und,True,eduardomackenz1,False,,None,False
+1287095285127286787,#colombia,laopinioncucuta,"Cúcuta, Colombia",2020-07-25 18:40:03,0,0,113,es,False,None,False,,None,True
+1287095251765616640,#colombia,AlissonTyler4u,,2020-07-25 18:39:55,8,5,297,en,False,None,False,,None,True
+1287095179841855490,#colombia,DonGuillermoPac,,2020-07-25 18:39:38,0,0,77,und,False,None,False,,None,True
+1287095033884221440,#colombia,murosinfiltro,,2020-07-25 18:39:03,2,0,270,es,False,None,False,,None,False
+1287094928640806912,#colombia,JulianDiazSc,,2020-07-25 18:38:38,0,0,187,es,False,None,False,,None,False
+1287094778451169281,#colombia,DonGuillermoPac,,2020-07-25 18:38:02,2,0,33,und,True,FernanMartinez,False,,None,False
+1287094379665121287,#colombia,NochesVIP1,Central America,2020-07-25 18:36:27,0,1,191,und,False,None,False,,None,True
+1287094094565650434,#colombia,GeaGamers,Colombia,2020-07-25 18:35:19,2,1,294,es,False,None,False,,None,True
+1287093773651058688,#colombia,MiserSr,"Bogotá, #Américas y #Universal",2020-07-25 18:34:03,2,1,304,is,True,AlcaldiaTibacuy,False,,None,False
+1287093646643417088,#colombia,TejidosMamanina,"Cali, Colombia",2020-07-25 18:33:33,1,0,234,es,False,None,False,,None,False
+1287093606809915392,#colombia,michelpuche8,"Miami, FL",2020-07-25 18:33:23,0,0,237,es,False,None,False,,None,False
+1287093490464301056,#colombia,dkrito85,"Cali, Valle del Cauca",2020-07-25 18:32:55,0,0,190,es,False,None,False,,None,False
+1287093351741890565,#colombia,C7AVILES,"London, England - UK",2020-07-25 18:32:22,0,0,141,es,False,None,False,,None,False
+1287093321958031360,#colombia,RucoVirus,"Philadelphia, PA",2020-07-25 18:32:15,2,0,262,es,True,pulzo,False,,None,False
+1287093223094194178,#colombia,dNoirLor,,2020-07-25 18:31:52,0,0,167,es,True,ActualidadRT,False,,None,False
+1287093019829841922,#colombia,ColitaBrave,#Manjaran,2020-07-25 18:31:03,3,0,111,es,False,None,False,,None,False
+1287092952435691521,#colombia,LaCarinosaNeiva,"Neiva, Colombia",2020-07-25 18:30:47,1,1,107,es,False,None,False,,None,False
+1287092796462161921,#colombia,sanfilippo_col,"Bogotá, D.C., Colombia",2020-07-25 18:30:10,2,0,275,es,False,None,False,,None,True
+1287092769836670976,#colombia,sesociocom,Ciudad Autónoma de Buenos Aire,2020-07-25 18:30:04,9,4,259,es,False,None,False,,None,True
+1287092753935998977,#colombia,AmChamCol,"Bogotá, Colombia",2020-07-25 18:30:00,3,0,294,es,False,None,False,,None,True
+1287092547849003009,#colombia,javibum2,COLOMBIA,2020-07-25 18:29:11,0,0,79,und,True,carimo91,False,,None,False
+1287092547295367169,#colombia,Javostrik,Guayaquil,2020-07-25 18:29:10,1,1,259,es,False,None,False,,None,False
+1287092536847118337,#colombia,AndresF98565878,,2020-07-25 18:29:08,0,0,88,es,False,None,False,,None,True
+1287092247805165568,#colombia,lilianakleinner,"Santander, Colombia",2020-07-25 18:27:59,3,0,216,es,True,genteconvos,False,,None,False
+1287092229790740486,#colombia,Qromal,Colombia,2020-07-25 18:27:55,1,2,98,und,True,RevistaSemana,False,,None,False
+1287092132877144066,#colombia,DonGuillermoPac,,2020-07-25 18:27:32,1,1,49,und,True,_NOALCOMUNISMO,False,,None,False
+1287092100916543490,#colombia,CrimeAmazon,Colombia ,2020-07-25 18:27:24,0,0,233,es,False,None,False,,None,False
+1287092050190508032,#colombia,NosMienten_,,2020-07-25 18:27:12,11,7,276,und,False,None,False,,None,False
+1287091889439748103,#colombia,deividplazas,Colombia.bogota,2020-07-25 18:26:34,0,0,289,es,False,None,False,,None,False
+1287091828563615746,#colombia,platino89,COLOMBIA,2020-07-25 18:26:19,0,0,259,es,False,None,False,,None,False
+1287091795675893762,#colombia,outagedetect,,2020-07-25 18:26:11,16,7,272,es,False,None,False,,None,True
+1287091776835158021,#colombia,javibum2,COLOMBIA,2020-07-25 18:26:07,1,0,115,es,False,None,False,,None,False
+1287091709294321664,#colombia,ALEXTM507,Panamá ciudad Panamá,2020-07-25 18:25:51,0,1,302,und,False,None,False,,None,True
+1287091500057333760,#colombia,Soachacomunica,"Soacha, Cundinamarca",2020-07-25 18:25:01,0,0,146,es,False,None,False,,None,True
+1287091499730178048,#colombia,appalanca,"Washington, DC",2020-07-25 18:25:01,1,1,114,es,False,None,False,,None,False
+1287091395392569345,#colombia,dianacortes2012,,2020-07-25 18:24:36,1,0,251,es,False,None,False,,None,False
+1287091166815674374,#colombia,V0XP0PULIV0XDEI,"""INTERIOR DE LA TIERRA HUECA!""",2020-07-25 18:23:41,0,0,304,es,False,None,False,,None,True
+1287091042081275905,#colombia,TwiterosCali,"Cali, Colombia",2020-07-25 18:23:12,5,1,131,es,False,None,False,,None,True
+1287090886627733506,#colombia,JoseDanny22,"Bogotá, D.C., Colombia ",2020-07-25 18:22:35,2,0,72,es,False,None,False,,None,True
+1287090514584637440,#colombia,lau_pu,Bogotá - Colombia.,2020-07-25 18:21:06,9,1,134,es,False,None,False,,None,False
+1287090488978243584,#colombia,teleSURtv,Caracas,2020-07-25 18:21:00,27,29,216,es,False,None,False,,None,False
+1287090414022012930,#colombia,RedMasNoticias,Colombia,2020-07-25 18:20:42,4,0,244,es,False,None,False,,None,True
+1287090052955332609,#colombia,johangr17,,2020-07-25 18:19:16,1,0,145,es,False,None,False,,None,False
+1287089820934832128,#colombia,EdgarRicardoArd,"Bogotá, D.C., Colombia",2020-07-25 18:18:20,1,2,210,es,False,None,False,,None,False
+1287089388049051656,#colombia,CorruptHunterCo,Colombia,2020-07-25 18:16:37,0,0,280,es,False,None,False,,None,False
+1287089035635240960,#colombia,Kaderzkan,izmir,2020-07-25 18:15:13,0,0,274,tr,False,None,False,,None,True
+1287088763194298369,#colombia,iSoyMix,CDMX,2020-07-25 18:14:08,0,0,229,es,False,None,False,,None,False
+1287088665861279747,#colombia,jeison_peralta,Colombia - Ibague,2020-07-25 18:13:45,0,0,190,es,False,None,False,,None,False
+1287088235806707718,#colombia,Csanchezberzain,,2020-07-25 18:12:03,114,216,272,es,False,None,False,,None,False
